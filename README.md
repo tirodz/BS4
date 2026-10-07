@@ -1,10 +1,10 @@
 # 🎮 BS4
 
+### PlayStation 4 System Software Emulation Research
+
 <p align="center">
   <img src="assets/bs4-play-no-limits.gif" alt="Looping, 2× upscaled PlayStation blue bumper reading Play Has No Limits" width="960">
 </p>
-
-<p align="center"><em>2× upscaled from the supplied 640×360 clip to 1280×720; loops continuously.</em></p>
 
 BS4 is a local research project investigating whether genuine Sony PlayStation 4 system software can be booted on Windows. The project uses the historical Orbital PS4 emulator as its primary experimental route. The goal is real Orbis system software, not a visual recreation.
 
