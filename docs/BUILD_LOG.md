@@ -41,3 +41,10 @@ Chronological record; raw output is under `logs/orbital-m0/`.
 ## Runtime boundary
 
 No QEMU guest boot occurred. Launcher attempts stopped at preflight because required runtime assets/build images were absent. These are preparation checks, not runtime attempts; see `docs/RUNTIME_LOG.md`.
+
+## 2026-10-07 — GCC cross-compiler attempts
+
+- GCC source: GNU GCC 15.2.0, `tools/downloads/gcc-15.2.0.tar.xz`; observed SHA-256 `438FD996826B0C82485A29DA03A72D71D6E3541A83EC702DF4271F6FE025D24E`. GCC's `contrib/download_prerequisites` script completed and its checks passed. Build-only files remain under ignored `tools/`.
+- First configure/build: `tools/gcc-build/`, `--build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=i686-elf`, `make -j6 all-gcc`. This was inconsistent with the actual `/usr/bin/gcc` MSYS compiler; it failed in `libiberty/pex-win32.c` with missing `_O_RDONLY`, `_O_BINARY`, `_read`, `_open`, `_dup`, `_pipe` and related Win32 declarations. Logs: `gcc-configure-20261007.log`, `gcc-build-20261007.log`.
+- Corrected attempt: configure in `tools/gcc-build-mingw/` with `PATH=/mingw64/bin:/usr/bin:$PATH`, `CC=/mingw64/bin/gcc`, `CXX=/mingw64/bin/g++`, same declared build/host/target and local GNU `as-new.exe`/`ld-new.exe`. Configure exited 0 (`gcc-configure-mingw-20261007.log`). `make -j6 all-gcc` failed in GCC 15.2 bundled `libcody/client.cc:329`: `u8""` is `const char8_t*` under the installed MinGW GCC/libstdc++ 16.2, but the overload expects `size_t`. The remaining make jobs were stopped after the error was captured. This is not a successful compiler build. Evidence: `gcc-build-mingw-20261007.log`.
+- Next test: reconfigure/rebuild with host `CXXFLAGS=-fno-char8_t` if supported by this MinGW compiler, or use a compatible older MinGW host compiler. Do not patch Orbital for this host-toolchain issue. If GCC succeeds, run `make install-gcc`, verify `i686-elf-gcc -dumpmachine`, and retry BIOS. BIOS and GRUB images remain unbuilt.

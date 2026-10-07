@@ -2,7 +2,7 @@
 
 ## ERR-0001 — GRUB configure sees PE/COFF instead of ELF
 
-Status: RESOLVED (local build workaround)
+Status: BLOCKED
 
 - Environment: Windows MSYS2/MINGW64; pinned GRUB `bc159e3fbd976ba30897db6307a618d9d8de6911` in isolated copy.
 - Command: `./configure --target=x86_64 --disable-werror && make -j4` after isolated bootstrap.
@@ -16,7 +16,7 @@ Status: RESOLVED (local build workaround)
 
 ## ERR-0002 — BIOS Kconfig help text parsed as options
 
-Status: INVESTIGATING
+Status: RESOLVED (configuration step only)
 
 - Environment: Windows MSYS2, pinned BIOS `bb0e19a5c026ad5ca833afe16e2deed025d4419d`.
 - Command: BIOS clean build/Kconfig `olddefconfig`; exact command is in `logs/orbital-m0/bios-kconfig-clean-20261007.log`.
@@ -42,7 +42,7 @@ Status: RESOLVED FOR QEMU BUILD
 
 ## ERR-0004 — Clang rejects legacy GCC x86 inline-assembly constraints
 
-Status: INVESTIGATING
+Status: BLOCKED PENDING GCC CROSS-COMPILER
 
 - Environment: Windows MSYS2; pinned BIOS; Clang targeting `i386-unknown-elf` with local GNU ELF binutils.
 - Command: BIOS `make -j4` with local compiler adapter, `/usr/bin/gcc` for host helpers, GNU `as-new.exe` and GNU `ld-new.exe`.
@@ -53,3 +53,12 @@ Status: INVESTIGATING
 - Attempts: Clang emits i386 ELF and GNU ld passes the BIOS alignment test, but BIOS C compilation fails on its GCC inline assembly.
 - Result: no `ubios.bin`.
 - Next: build/use a small GCC cross compiler targeting i686-elf with the existing local GNU ELF binutils; avoid architecture changes.
+
+## ERR-0005 — GCC cross build initially used the wrong host compiler
+
+Status: BLOCKED
+
+- Environment: MSYS2; GNU GCC 15.2.0 source; intended `build=host=x86_64-w64-mingw32`, `target=i686-elf`.
+- First attempt: `make -j6 all-gcc` in `tools/gcc-build/` after configure without explicit `CC`. It selected MSYS `/usr/bin/gcc` despite the MinGW host triplet and failed in `libiberty/pex-win32.c` with missing Win32 declarations (`_O_RDONLY`, `_O_BINARY`, `_read`, `_open`, `_dup`, `_pipe`, etc.). See `gcc-build-20261007.log`.
+- Retry: separate `tools/gcc-build-mingw/`, `PATH=/mingw64/bin:/usr/bin:$PATH`, `CC=/mingw64/bin/gcc`, `CXX=/mingw64/bin/g++`. Configure exited 0. `make -j6 all-gcc` failed in bundled GCC 15.2 `libcody/client.cc:329`: `u8""` is `const char8_t*` under installed MinGW GCC/libstdc++ 16.2 but the selected constructor expects `size_t`. Remaining jobs were stopped after capturing this error. See `gcc-build-mingw-20261007.log`.
+- Next: test host C++ build with `CXXFLAGS=-fno-char8_t` if the installed MinGW compiler supports it, or use a compatible older host compiler. Do not patch Orbital for this toolchain issue.

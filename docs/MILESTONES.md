@@ -13,6 +13,7 @@
 | 2026-10-07 | Runtime inputs classified | PARTIAL | source-backed derivation distinctions in `FIRMWARE_REQUIREMENTS.md`; executable list and recovery QCOW construction remain unknown. |
 | 2026-10-07 | BIOS Kconfig | VERIFIED | `olddefconfig` passes after LF normalization; `bios-kconfig-lf-fixed-20261007.log`. Full BIOS remains blocked on Clang/GCC asm compatibility. |
 | 2026-10-07 | GRUB build | BLOCKED | PE/COFF vs ELF error in `grub-build-isolated-20261007.log`. |
+| 2026-10-07 | i686-elf GCC toolchain | BLOCKED | GNU GCC 15.2 `all-gcc` fails in bundled libcody against MinGW GCC/libstdc++ 16.2 at `client.cc:329`; see `gcc-build-mingw-20261007.log`. |
 | UNKNOWN | First M0 guest launch | NOT ATTEMPTED | launcher stopped at preflight; no QEMU runtime record. |
 | UNKNOWN | Real kernel / mini-syscore / Safe Mode | NOT VERIFIED | no guest logs/screenshots. |
 | UNKNOWN | First system-service, Shell, or genuine Home boot | NOT VERIFIED | beyond current milestone. |

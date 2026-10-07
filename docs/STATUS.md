@@ -1,54 +1,47 @@
-# Project status
+# BS4 status
 
 Last updated: 2026-10-07
 
-## What are we trying to achieve?
+## VERIFIED
 
-Boot genuine Sony PS4 system software on Windows, using historical Orbital as the primary route. Current milestone M0 is real 5.00 Orbis kernel → mini-syscore → Safe Mode. It is not the Dynamic Menu milestone.
+- Orbital root is pinned locally at `8f51aea60ee15a15dcf3f1fe09d93912f4539259`; QEMU, BIOS, GRUB, keycodemapdb and glslang revisions are in `DEPENDENCIES.md`.
+- Historical QEMU clean rebuild succeeded on Windows/MSYS2. `qemu-system-ps4.exe` reports 2.11.91, lists the `ps4` machine/devices, and custom `qemu-img.exe` has `create-ps4`. Evidence: `logs/orbital-m0/qemu-clean-rebuild-20261007.log`.
+- User supplied the official 5.00 system-update PUP. Local files are `PS4UPDATE.PUP` and byte-identical copy `firmware/official/PS4UPDATE-5.00-system.PUP`; size 374,669,312 bytes, SHA-256 `089168A7CC702FD45B65E8C8271FDFA0386BD1969509A06DC2FE94B03B978501`. Both are ignored by Git. Hash/size and `SLB2` header match the expected package; this local check is not independent Sony signature verification.
+- Preflight sees the PUP and clearly reports missing staged runtime inputs. Launcher stops before QEMU; no guest was started.
+- BIOS Kconfig succeeds after LF normalization of `orbital-bios/src/Kconfig` and `vgasrc/Kconfig`.
+- User-requested README GIF/title update was committed and pushed in `f9cf006` and `f910f2e`.
 
-## What currently works?
+## IN PROGRESS
 
-- Local Orbital root checkout is pinned at `8f51aea60ee15a15dcf3f1fe09d93912f4539259`; component revisions are listed in `docs/DEPENDENCIES.md`.
-- The historical QEMU component clean-rebuild completed and produced `orbital-qemu/ps4-softmmu/qemu-system-ps4.exe`; it reports version 2.11.91 and lists the `ps4` machine and PS4 devices.
-- The custom `qemu-img.exe` is built and exposes `create-ps4`.
-- The official user-provided 5.00 system-update PUP is present locally: 374,669,312 bytes; SHA-256 `089168A7CC702FD45B65E8C8271FDFA0386BD1969509A06DC2FE94B03B978501`. It is outside Git. Size/hash are recorded; no Sony signature verification was performed by the local preflight.
-- Firmware preflight and one-command launcher exist. Launcher tests have only reached preflight and correctly stopped before QEMU due to missing runtime assets.
+- No compile or runtime process is currently running. The next work is the narrow GCC host compatibility retry recorded below; no emulator source changes for the GCC `libcody` error are justified.
 
-## What currently fails?
+## BLOCKED
 
-- Full historical runner preparation is incomplete. `ubios.bin` and `boot.img` are not built.
-- BIOS Kconfig parses after normalizing the two Kconfig inputs from Windows CRLF to LF. GNU ELF binutils pass the BIOS linker probe. The BIOS compile then fails because Clang rejects legacy GCC-only inline-assembly constraints (`Q`, `=Qi`); an i686-elf GCC toolchain has not yet been built.
-- GRUB configure in the isolated test fails because its linker probe sees MinGW PE/COFF instead of an ELF target (`none of __bss_start, edata or _edata is defined`).
-- No guest launch/boot has been attempted; kernel, mini-syscore, and Safe Mode are unverified.
+- Full historical runner is not built: `ubios.bin` and `boot.img` are absent. Clang's i386 build fails on GCC x86 inline-assembly constraints `Q` and `=Qi`; see ERR-0004. The first GCC attempt used an MSYS compiler inconsistent with its declared MinGW host and failed in `libiberty/pex-win32.c` with missing `_O_*`, `_read`, `_open`, and related declarations. The MinGW-selected retry then failed in bundled `libcody` at `client.cc:329` on `char8_t`/`size_t`; see ERR-0005.
+- GNU GCC 15.2 cross compiler retry did not complete. With the corrected MinGW compiler selection, `make -j6 all-gcc` failed in `gcc-15.2.0/libcody/client.cc:329` because `u8""` is `const char8_t*` with the installed MinGW GCC 16.2 and cannot initialize a `size_t` parameter. The make session was stopped after this error was captured. See `logs/orbital-m0/gcc-build-mingw-20261007.log`.
+- Isolated GRUB configure with native MinGW fails `none of __bss_start, edata or _edata is defined`: PE/COFF host linker output does not satisfy its ELF linker probe. No GRUB build with the newly built GNU ELF linker has yet been verified.
+- Runtime preflight lacks `sflash/orbisys-500`, `sflash.bin`, `vbios.bin`, HDD/USB inputs, SAMU blobs and a complete decrypted userland set. See `FIRMWARE_REQUIREMENTS.md`.
 
-## What files do we have?
+## UNKNOWN
 
-- Official 5.00 system-update PUP: `firmware/official/PS4UPDATE-5.00-system.PUP` (byte-identical copy of user-provided `PS4UPDATE.PUP`).
-- Historical Orbital source and built QEMU outputs under local-only `orbital-500/`.
-- MSYS2, glslang and ELF/binutils experiments under local-only `tools/`.
-- Build/preflight logs under `logs/orbital-m0/`.
-- Research reports under `research/`.
+- Whether `CXXFLAGS=-fno-char8_t` resolves GCC 15.2's bundled `libcody` host build error, or a matching MinGW host compiler is needed; whether any GCC cross compiler can then build the pinned BIOS.
+- Exact full Safe Mode userland ELF/SELF/SPRX set and complete creation recipe/internal layout for `usb/usb-pup-500rec.qcow2`.
+- Whether a suitable legitimate recovery PUP is available to supply `preinst.img`, `recovery.img` and recovery USB material.
+- Kernel boot, mini-syscore, Safe Mode, video output, and any real Shell/Home execution. None has been attempted or verified.
 
-## What files are missing?
+## DO NOT REPEAT
 
-At minimum for the documented launch configuration: `firmware/orbital-5.00/sflash/orbisys-500`, `sflash.bin`, `vbios.bin`, `hdd/system.img`, `hdd/system_ex.img`, `usb/usb-pup-500rec.qcow2`, and `crypto/blobs.zip`; historical HDD staging also lists `hdd/eap.img`, `hdd/preinst.img`, and `hdd/recovery.img`. See `docs/FIRMWARE_REQUIREMENTS.md` for what the supplied system PUP can derive and which provenance remains user-specific. Build outputs `ubios.bin` and `boot.img` are also absent.
+- Do not redownload the 5.00 PUP or put any Sony package, keys, dumps, decrypted binary, image, or SAMU data in Git.
+- Do not use third-party decrypted firmware/dumps or claim PUP signature verification from size/hash alone.
+- Do not rerun the initial GCC command without explicitly selecting `/mingw64/bin/gcc`; that selected the wrong host compiler.
+- Do not treat QEMU-only build, launcher preflight, or a host toolchain build as a PS4 boot.
 
-## Current blocker
+## Exact next actions
 
-Two independent blockers remain: the Windows BIOS/GRUB toolchain build is incomplete, and Orbital runtime inputs have not been prepared from the user's material. The official PUP itself is present and is not a blocker.
+1. Retry the GCC 15.2 build using an explicitly tested compatibility option such as `CXXFLAGS=-fno-char8_t` for its host C++ build, or use a supported older MinGW host compiler. Do not edit Orbital BIOS for this toolchain mismatch.
+2. If successful, run `make install-gcc`, verify `tools/i686-elf/bin/i686-elf-gcc -dumpmachine` prints `i686-elf`, then build BIOS with both Kconfig files kept LF and the GNU ELF binutils.
+3. Configure/build pinned GRUB with host tools for Windows and ELF target linker, in an isolated build directory, then verify `boot.img`.
+4. Only after QEMU, BIOS and GRUB artifacts pass preflight, prepare legitimate runtime inputs. Matching `eap.img`, `system.img`, and `system_ex.img` are documented as extractable from the supplied 5.00 PUP after console-side `ps4-pup_decrypt` and host `ps4-pup_unpack`; none is currently staged. Keep encrypted/decrypted distinctions and provenance in the manifest.
+5. Run the one-command launcher; M0 succeeds only with captured real kernel → mini-syscore → Safe Mode evidence and a clean second invocation.
 
-## Last successful action
-
-The pinned BIOS `olddefconfig` step now passes after converting `src/Kconfig` and `vgasrc/Kconfig` to LF, logged in `logs/orbital-m0/bios-kconfig-lf-fixed-20261007.log`. The latest successful complete component build remains QEMU clean rebuild at `logs/orbital-m0/qemu-clean-rebuild-20261007.log` (exit 0).
-
-## Last failed action
-
-The first full BIOS compile reached source compilation but failed on unsupported Clang inline-assembly constraints in legacy code. Earlier Kconfig errors are understood: the parser receives CRLF files on Windows and requires LF; normalizing both inputs let `olddefconfig` pass. GRUB still fails its ELF-linker probe under MinGW PE/COFF. Logs: `bios-full-build-20261007-retry.log`, `bios-kconfig-lf-fixed-20261007.log`, and `grub-build-isolated-20261007.log`.
-
-## Next exact action
-
-Build a small i686-elf GCC cross-compiler against the local GNU ELF binutils; then rerun the BIOS build. Preserve LF for BIOS Kconfig inputs in the reproducible build command. Continue the separate GRUB ELF-target investigation.
-
-## Evidence
-
-See `docs/BUILD_LOG.md`, `docs/ERRORS.md`, `docs/RUNTIME_LOG.md`, `docs/FIRMWARE.md`, `research/ORBITAL_WINDOWS_BUILD.md`, and raw logs under `logs/orbital-m0/`. No genuine PS4 runtime success is recorded.
+The official PUP itself is present and is not the current blocker. The actual boot boundary still requires legitimately sourced/prepared Sony runtime material.

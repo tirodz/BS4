@@ -7,7 +7,7 @@ Reproduce historical Orbital's real 5.00 PS4 boot through kernel, mini-syscore a
 ## Current state
 
 - QEMU and custom qemu-img build successfully on Windows using pinned source plus documented compatibility edits.
-- BIOS does not yet produce `ubios.bin`; Kconfig passes after LF normalization, but Clang fails on GCC-specific `Q`/`=Qi` inline-assembly constraints.
+- BIOS does not yet produce `ubios.bin`; Kconfig passes after LF normalization, but Clang fails on GCC-specific `Q`/`=Qi` inline-assembly constraints. The GNU GCC 15.2 cross-compiler attempt failed in bundled `libcody` against MinGW GCC/libstdc++ 16.2 (`char8_t*` passed where `size_t` is expected); see `ERRORS.md`.
 - GRUB does not yet produce `boot.img`; tested MinGW linker output is PE/COFF where GRUB expects ELF.
 - Official user-provided 5.00 system-update PUP is present locally, encrypted, excluded from Git. It can supply some matching system partition images after the documented console decryption/host unpacking route.
 - Runtime console dump inputs are not staged. No guest runtime boot has occurred.
@@ -55,7 +55,7 @@ The launcher runs preflight and stops before QEMU if requirements/build outputs 
 
 ## Next investigation
 
-1. Build a small i686-elf GCC cross compiler using the local GNU ELF binutils; Clang's rejection of GCC x86 constraints blocks the BIOS.
+1. Retry GCC 15.2 with a tested host C++ `-fno-char8_t` option or a compatible older MinGW host compiler; the first retry failed in GCC's bundled `libcody`, not Orbital BIOS.
 2. Make Kconfig LF normalization part of the repeatable Windows build procedure; `olddefconfig` passes with both Kconfig files in LF form.
 3. Configure GRUB's host/target tools separately so ELF target code links with the local GNU linker.
 4. Process matching partition images from the existing PUP only through the pinned documented route, and establish legitimacy/availability of console-side tooling before execution.
