@@ -1,0 +1,309 @@
+CMake Warning (deprecated) at CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (author) at C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake:448 (message):
+  Unable to determine default CMAKE_INSTALL_LIBDIR directory because no
+  target architecture is known.  Please enable at least one language before
+  including GNUInstallDirs.
+Call Stack (most recent call first):
+  C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake:301 (_GNUInstallDirs_LIBDIR_get_default)
+  C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake:301 (cmake_language)
+  C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake:547 (_GNUInstallDirs_cache_path)
+  CMakeLists.txt:10 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+-- The C compiler identification is GNU 16.2.0
+-- The CXX compiler identification is GNU 16.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- spirv-tools not linked - illegal SPIRV may be generated for HLSL
+-- Configuring done (3.4s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Syf/Desktop/BS4/tools/glslang-build
+[1/51] Building CXX object OGLCompilersDLL/CMakeFiles/OGLCompiler.dir/InitializeDll.cpp.obj
+[2/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslAttributes.cpp.obj
+[3/51] Building CXX object glslang/OSDependent/Windows/CMakeFiles/OSDependent.dir/ossource.cpp.obj
+[4/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslOpMap.cpp.obj
+[5/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslScanContext.cpp.obj
+[6/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslTokenStream.cpp.obj
+[7/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslParseables.cpp.obj
+[8/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/attribute.cpp.obj
+[9/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslGrammar.cpp.obj
+[10/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/iomapper.cpp.obj
+[11/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/Constant.cpp.obj
+[12/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/InfoSink.cpp.obj
+[13/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/IntermTraverse.cpp.obj
+[14/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/Initialize.cpp.obj
+[15/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/Intermediate.cpp.obj
+[16/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseContextBase.cpp.obj
+[17/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/PoolAlloc.cpp.obj
+[18/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/RemoveTree.cpp.obj
+[19/51] Building CXX object hlsl/CMakeFiles/HLSL.dir/hlslParseHelper.cpp.obj
+[20/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/Scan.cpp.obj
+[21/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/ShaderLang.cpp.obj
+[22/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/SymbolTable.cpp.obj
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.cpp: In member function 'virtual void glslang::TAnonMember::dump(TInfoSink&, bool) const':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.cpp:232:51: warning: unused parameter 'complete' [-Wunused-parameter]
+  232 | void TAnonMember::dump(TInfoSink& TInfoSink, bool complete) const
+      |                                              ~~~~~^~~~~~~~
+[23/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/Versions.cpp.obj
+[24/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/intermOut.cpp.obj
+[25/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/limits.cpp.obj
+[26/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/parseConst.cpp.obj
+[27/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/ParseHelper.cpp.obj
+In file included from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/intermediate.h:56,
+                 from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:69,
+                 from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.h:53,
+                 from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:39:
+In member function 'void glslang::TType::shallowCopy(const glslang::TType&)',
+    inlined from 'glslang::TVariable::TVariable(const glslang::TString*, const glslang::TType&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:161:27,
+    inlined from 'void glslang::TParseContext::addQualifierToExisting(const glslang::TSourceLoc&, glslang::TQualifier, const glslang::TString&)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7617:81:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/Types.h:1441:17: warning: 'blockNameType.glslang::TType::sampler' may be used uninitialized [-Wmaybe-uninitialized]
+ 1441 |         sampler = copyOf.sampler;
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp: In member function 'void glslang::TParseContext::addQualifierToExisting(const glslang::TSourceLoc&, glslang::TQualifier, const glslang::TString&)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7616:15: note: 'blockNameType' declared here
+ 7616 |         TType blockNameType(EbtReference, blockType, identifier);
+      |               ^~~~~~~~~~~~~
+In member function 'void glslang::TType::shallowCopy(const glslang::TType&)',
+    inlined from 'glslang::TVariable::TVariable(const glslang::TString*, const glslang::TType&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:161:27,
+    inlined from 'void glslang::TParseContext::addQualifierToExisting(const glslang::TSourceLoc&, glslang::TQualifier, const glslang::TString&)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7617:81:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/Types.h:1455:24: warning: 'blockNameType.glslang::TType::typeParameters' may be used uninitialized [-Wmaybe-uninitialized]
+ 1455 |         typeParameters = copyOf.typeParameters;
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp: In member function 'void glslang::TParseContext::addQualifierToExisting(const glslang::TSourceLoc&, glslang::TQualifier, const glslang::TString&)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7616:15: note: 'blockNameType.glslang::TType::typeParameters' was declared here
+ 7616 |         TType blockNameType(EbtReference, blockType, identifier);
+      |               ^~~~~~~~~~~~~
+In member function 'void glslang::TType::shallowCopy(const glslang::TType&)',
+    inlined from 'glslang::TVariable::TVariable(const glslang::TString*, const glslang::TType&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:161:27,
+    inlined from 'void glslang::TParseContext::addQualifierToExisting(const glslang::TSourceLoc&, glslang::TQualifier, const glslang::TString&)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7617:81:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/Types.h:1440:19: warning: 'blockNameType.glslang::TType::coopmat' may be used uninitialized [-Wmaybe-uninitialized]
+ 1440 |         basicType = copyOf.basicType;
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp: In member function 'void glslang::TParseContext::addQualifierToExisting(const glslang::TSourceLoc&, glslang::TQualifier, const glslang::TString&)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7616:15: note: 'blockNameType.glslang::TType::coopmat' was declared here
+ 7616 |         TType blockNameType(EbtReference, blockType, identifier);
+      |               ^~~~~~~~~~~~~
+In member function 'void glslang::TType::shallowCopy(const glslang::TType&)',
+    inlined from 'glslang::TVariable::TVariable(const glslang::TString*, const glslang::TType&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:161:27,
+    inlined from 'void glslang::TParseContext::declareBlock(const glslang::TSourceLoc&, glslang::TTypeList&, const glslang::TString*, glslang::TArraySizes*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7255:79:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/Types.h:1441:17: warning: 'blockNameType.glslang::TType::sampler' may be used uninitialized [-Wmaybe-uninitialized]
+ 1441 |         sampler = copyOf.sampler;
+      |         ~~~~~~~~^~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp: In member function 'void glslang::TParseContext::declareBlock(const glslang::TSourceLoc&, glslang::TTypeList&, const glslang::TString*, glslang::TArraySizes*)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7254:15: note: 'blockNameType' declared here
+ 7254 |         TType blockNameType(EbtReference, blockType, *blockName);
+      |               ^~~~~~~~~~~~~
+In member function 'void glslang::TType::shallowCopy(const glslang::TType&)',
+    inlined from 'glslang::TVariable::TVariable(const glslang::TString*, const glslang::TType&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:161:27,
+    inlined from 'void glslang::TParseContext::declareBlock(const glslang::TSourceLoc&, glslang::TTypeList&, const glslang::TString*, glslang::TArraySizes*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7255:79:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/Types.h:1455:24: warning: 'blockNameType.glslang::TType::typeParameters' may be used uninitialized [-Wmaybe-uninitialized]
+ 1455 |         typeParameters = copyOf.typeParameters;
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp: In member function 'void glslang::TParseContext::declareBlock(const glslang::TSourceLoc&, glslang::TTypeList&, const glslang::TString*, glslang::TArraySizes*)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7254:15: note: 'blockNameType.glslang::TType::typeParameters' was declared here
+ 7254 |         TType blockNameType(EbtReference, blockType, *blockName);
+      |               ^~~~~~~~~~~~~
+In member function 'void glslang::TType::shallowCopy(const glslang::TType&)',
+    inlined from 'glslang::TVariable::TVariable(const glslang::TString*, const glslang::TType&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/SymbolTable.h:161:27,
+    inlined from 'void glslang::TParseContext::declareBlock(const glslang::TSourceLoc&, glslang::TTypeList&, const glslang::TString*, glslang::TArraySizes*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7255:79:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/Include/Types.h:1440:19: warning: 'blockNameType.glslang::TType::coopmat' may be used uninitialized [-Wmaybe-uninitialized]
+ 1440 |         basicType = copyOf.basicType;
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp: In member function 'void glslang::TParseContext::declareBlock(const glslang::TSourceLoc&, glslang::TTypeList&, const glslang::TString*, glslang::TArraySizes*)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/ParseHelper.cpp:7254:15: note: 'blockNameType.glslang::TType::coopmat' was declared here
+ 7254 |         TType blockNameType(EbtReference, blockType, *blockName);
+      |               ^~~~~~~~~~~~~
+[28/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/linkValidate.cpp.obj
+[29/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpAtom.cpp.obj
+[30/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/reflection.cpp.obj
+[31/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/Pp.cpp.obj
+In file included from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:90:
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'glslang::MacroExpandResult glslang::TPpContext::MacroExpand(glslang::TPpToken*, bool, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1313:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:630:25: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [104]' [-Warray-bounds=]
+  630 |             prevScanner = pp->parseContext.getScanner();
+      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp: In member function 'glslang::MacroExpandResult glslang::TPpContext::MacroExpand(glslang::TPpToken*, bool, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1209:43: note: object of size 104 allocated by 'operator new'
+ 1209 |     tMacroInput *in = new tMacroInput(this);
+      |                                           ^
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'glslang::MacroExpandResult glslang::TPpContext::MacroExpand(glslang::TPpToken*, bool, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1205:18:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:630:25: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [24]' [-Warray-bounds=]
+  630 |             prevScanner = pp->parseContext.getScanner();
+      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp: In member function 'glslang::MacroExpandResult glslang::TPpContext::MacroExpand(glslang::TPpToken*, bool, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1205:38: note: object of size 24 allocated by 'operator new'
+ 1205 |         pushInput(new tZeroInput(this));
+      |                                      ^
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'glslang::MacroExpandResult glslang::TPpContext::MacroExpand(glslang::TPpToken*, bool, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1205:18:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:632:29: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [24]' [-Warray-bounds=]
+  632 |             pp->push_include(includedFile_);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp: In member function 'glslang::MacroExpandResult glslang::TPpContext::MacroExpand(glslang::TPpToken*, bool, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1205:38: note: object of size 24 allocated by 'operator new'
+ 1205 |         pushInput(new tZeroInput(this));
+      |                                      ^
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'glslang::TPpContext::TokenStream* glslang::TPpContext::PrescanMacroArg(TokenStream&, glslang::TPpToken*, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1033:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:630:25: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [24]' [-Warray-bounds=]
+  630 |             prevScanner = pp->parseContext.getScanner();
+      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp: In member function 'glslang::TPpContext::TokenStream* glslang::TPpContext::PrescanMacroArg(TokenStream&, glslang::TPpToken*, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1033:36: note: object of size 24 allocated by 'operator new'
+ 1033 |     pushInput(new tMarkerInput(this));
+      |                                    ^
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'glslang::TPpContext::TokenStream* glslang::TPpContext::PrescanMacroArg(TokenStream&, glslang::TPpToken*, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1033:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:632:29: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [24]' [-Warray-bounds=]
+  632 |             pp->push_include(includedFile_);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp: In member function 'glslang::TPpContext::TokenStream* glslang::TPpContext::PrescanMacroArg(TokenStream&, glslang::TPpToken*, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/Pp.cpp:1033:36: note: object of size 24 allocated by 'operator new'
+ 1033 |     pushInput(new tMarkerInput(this));
+      |                                    ^
+[32/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpContext.cpp.obj
+In file included from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp:83:
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'void glslang::TPpContext::setInput(glslang::TInputScanner&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp:113:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:630:25: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [32]' [-Warray-bounds=]
+  630 |             prevScanner = pp->parseContext.getScanner();
+      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp: In member function 'void glslang::TPpContext::setInput(glslang::TInputScanner&, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp:113:43: note: object of size 32 allocated by 'operator new'
+  113 |     pushInput(new tStringInput(this, input));
+      |                                           ^
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'void glslang::TPpContext::setInput(glslang::TInputScanner&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp:113:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:632:29: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [32]' [-Warray-bounds=]
+  632 |             pp->push_include(includedFile_);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp: In member function 'void glslang::TPpContext::setInput(glslang::TInputScanner&, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.cpp:113:43: note: object of size 32 allocated by 'operator new'
+  113 |     pushInput(new tStringInput(this, input));
+      |                                           ^
+[33/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpScanner.cpp.obj
+[34/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/preprocessor/PpTokens.cpp.obj
+In file included from C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp:97:
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'void glslang::TPpContext::pushTokenStreamInput(TokenStream&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp:198:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:630:25: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [40]' [-Warray-bounds=]
+  630 |             prevScanner = pp->parseContext.getScanner();
+      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp: In member function 'void glslang::TPpContext::pushTokenStreamInput(TokenStream&, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp:198:52: note: object of size 40 allocated by 'operator new'
+  198 |     pushInput(new tTokenInput(this, &ts, prepasting));
+      |                                                    ^
+In member function 'virtual void glslang::TPpContext::TokenizableIncludeFile::notifyActivated()',
+    inlined from 'void glslang::TPpContext::pushInput(tInput*)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:235:28,
+    inlined from 'void glslang::TPpContext::pushTokenStreamInput(TokenStream&, bool)' at C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp:198:14:
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpContext.h:632:29: warning: array subscript 'glslang::TPpContext::TokenizableIncludeFile[0]' is partly outside array bounds of 'unsigned char [40]' [-Warray-bounds=]
+  632 |             pp->push_include(includedFile_);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp: In member function 'void glslang::TPpContext::pushTokenStreamInput(TokenStream&, bool)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/glslang/MachineIndependent/preprocessor/PpTokens.cpp:198:52: note: object of size 40 allocated by 'operator new'
+  198 |     pushInput(new tTokenInput(this, &ts, prepasting));
+      |                                                    ^
+[35/51] Building CXX object glslang/CMakeFiles/glslang.dir/GenericCodeGen/CodeGen.cpp.obj
+[36/51] Building CXX object glslang/CMakeFiles/glslang.dir/GenericCodeGen/Link.cpp.obj
+[37/51] Linking CXX static library OGLCompilersDLL\libOGLCompiler.a
+[38/51] Linking CXX static library glslang\OSDependent\Windows\libOSDependent.a
+[39/51] Linking CXX static library hlsl\libHLSL.a
+[40/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/propagateNoContraction.cpp.obj
+[41/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/Logger.cpp.obj
+[42/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/InReadableOrder.cpp.obj
+[43/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/SpvPostProcess.cpp.obj
+[44/51] Building CXX object glslang/CMakeFiles/glslang.dir/MachineIndependent/glslang_tab.cpp.obj
+MachineIndependent/glslang_tab.cpp: In function 'int yyparse(glslang::TParseContext*)':
+MachineIndependent/glslang_tab.cpp:3919:9: warning: variable 'yynerrs' set but not used [-Wunused-but-set-variable=]
+[45/51] Linking CXX static library glslang\libglslang.a
+[46/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/SpvTools.cpp.obj
+[47/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/doc.cpp.obj
+[48/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/SpvBuilder.cpp.obj
+[49/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/disassemble.cpp.obj
+[50/51] Building CXX object SPIRV/CMakeFiles/SPIRV.dir/GlslangToSpv.cpp.obj
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/SPIRV/GlslangToSpv.cpp: In member function 'void {anonymous}::TGlslangToSpvTraverser::decorateStructType(const glslang::TType&, const glslang::TTypeList*, glslang::TLayoutPacking, const glslang::TQualifier&, spv::Id)':
+C:/Users/Syf/Desktop/BS4/tools/glslang-7.11.3214/SPIRV/GlslangToSpv.cpp:3359:9: warning: variable 'locationOffset' set but not used [-Wunused-but-set-variable=]
+ 3359 |     int locationOffset = 0;  // for use within the members of this struct
+      |         ^~~~~~~~~~~~~~
+[51/51] Linking CXX static library SPIRV\libSPIRV.a
+-- Install configuration: "Release"
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/lib/libglslang.a
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Public/ShaderLang.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/arrays.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/BaseTypes.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/Common.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/ConstantUnion.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/InfoSink.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/InitializeGlobals.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/intermediate.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/PoolAlloc.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/ResourceLimits.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/revision.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/ShHandle.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/Include/Types.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/attribute.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/glslang_tab.cpp.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/gl_types.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/Initialize.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/iomapper.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/LiveTraverser.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/localintermediate.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/ParseHelper.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/reflection.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/RemoveTree.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/Scan.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/ScanContext.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/SymbolTable.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/Versions.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/parseVersions.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/propagateNoContraction.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/preprocessor/PpContext.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/glslang/MachineIndependent/preprocessor/PpTokens.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/lib/libOSDependent.a
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/lib/libOGLCompiler.a
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/lib/libSPIRV.a
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/bitutils.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/spirv.hpp
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/GLSL.std.450.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/GLSL.ext.EXT.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/GLSL.ext.KHR.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/GlslangToSpv.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/hex_float.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/Logger.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/SpvBuilder.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/spvIR.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/doc.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/SpvTools.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/disassemble.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/GLSL.ext.AMD.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/GLSL.ext.NV.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/SPVRemapper.h
+-- Up-to-date: C:/Users/Syf/Desktop/BS4/tools/glslang-install/include/SPIRV/doc.h
+-- Installing: C:/Users/Syf/Desktop/BS4/tools/glslang-install/lib/libHLSL.a

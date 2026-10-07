@@ -1,0 +1,10 @@
+/bin/sh /c/Users/Syf/Desktop/BS4/tools/binutils-src/mkinstalldirs /c/Users/Syf/Desktop/BS4/tools/i686-elf /c/Users/Syf/Desktop/BS4/tools/i686-elf
+make[1]: Entering directory '/c/Users/Syf/Desktop/BS4/tools/binutils-build/libsframe'
+make[2]: Entering directory '/c/Users/Syf/Desktop/BS4/tools/binutils-build/libsframe'
+ /usr/bin/mkdir -p '/c/Users/Syf/Desktop/BS4/tools/i686-elf/share/info'
+/usr/bin/mkdir: cannot create directory ‘/c/Users/Syf’: Permission denied
+make[2]: *** [Makefile:1607: install-info-am] Error 1
+make[2]: Leaving directory '/c/Users/Syf/Desktop/BS4/tools/binutils-build/libsframe'
+make[1]: *** [Makefile:1495: install-am] Error 2
+make[1]: Leaving directory '/c/Users/Syf/Desktop/BS4/tools/binutils-build/libsframe'
+make: *** [Makefile:12129: install-libsframe] Error 2

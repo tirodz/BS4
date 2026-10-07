@@ -1,0 +1,16 @@
+make: Entering directory '/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/out'
+/usr/bin/gcc -Iscripts/kconfig -I/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/scripts/kconfig  -Iscripts/kconfig -DCURSES_LOC="<curses.h>" -DLOCALE -DKBUILD_NO_NLS -c -o scripts/kconfig/zconf.tab.o scripts/kconfig/zconf.tab.c
+/usr/bin/gcc  -o scripts/kconfig/conf scripts/kconfig/conf.o scripts/kconfig/zconf.tab.o  
+scripts/kconfig/conf --olddefconfig /c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:133: syntax error
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:132: unknown option "Currently"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:133: unknown option "it"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:134: unknown option "probably"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:328: syntax error
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:327: unknown option "Disabling"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:328: unknown option "cmos"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:533: syntax error
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:532: unknown option "Set"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:133:warning: multi-line strings not supported
+make: *** [/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/scripts/kconfig/Makefile:86: olddefconfig] Error 1
+make: Leaving directory '/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/out'

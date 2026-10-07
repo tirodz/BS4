@@ -1,0 +1,124 @@
+Importing unicode...
+Importing libgcrypt...
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:108: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  if re.match ("(Manifest|Makefile\.am|ac\.c|cipher\.c|hash-common\.c|hmac-tests\.c|md\.c|pubkey\.c)$", cipher_file) or cipher_file == "kdf.c" or cipher_file == "elgamal.c" or cipher_file == "primegen.c" or cipher_file == "ecc.c" or cipher_file == "test-getrusage.c":
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:112: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  if re.match ("Makefile\.in$", cipher_file):
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:115: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  if re.match (".*\.[ch]$", cipher_file):
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:116: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  isc = re.match (".*\.c$", cipher_file)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:204: SyntaxWarning: "\[" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\["? A raw string is also an option.
+  m = re.match ("(static byte|static unsigned char) (weak_keys_chksum)\[[0-9]*\] =", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:296: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("static const char \*selftest.*;$", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:298: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  fname = line[len ("static const char \*"):]
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:334: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static void \(\*progress_cb\).*;$", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:343: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("static void \*progress_cb_data.*;$", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:353: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("(static const char( |)\*|static gpg_err_code_t|void|static int|static gcry_err_code_t|static gcry_mpi_t|static void|void|static elliptic_curve_t) *$", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:358: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set2keys \(.*\);", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:361: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set3keys \(.*\);", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:364: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set2keys \(", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:368: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set3keys \(", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:576: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("(const char( |)\*|void) *$", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:581: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  m = re.match ("#include \"mod-source-info\.h\"", line)
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:55: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  conf = codecs.open (os.path.join ("grub-core", "Makefile.gcry.def"), "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:57: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  confutil = codecs.open ("Makefile.utilgcry.def", "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:87: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  cryptolist = codecs.open (os.path.join (cipher_dir_out, "crypto.lst"), "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:117: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f = codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:118: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw = codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:522: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw = codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:530: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f = codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:556: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f = codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:557: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw = codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:589: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:596: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:603: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:610: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:620: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  initfile = codecs.open (os.path.join (cipher_dir_out, "init.c"), "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:646: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f=codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/tools/orbital-grub-build/util/import_gcry.py:647: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+WARNING: grub-core/lib/libgcrypt-grub already exists
+WARNING: grub-core/lib/libgcrypt-grub/cipher already exists
+WARNING: grub-core/lib/libgcrypt-grub/mpi already exists
+WARNING: grub-core/lib/libgcrypt-grub/src already exists
+Generating Automake input...
+Saving timestamps...
+Running autoreconf...
+autoreconf-2.73: export WARNINGS=
+autoreconf-2.73: Entering directory '.'
+autoreconf-2.73: running: autopoint --force
+Copying file ABOUT-NLS
+Copying file build-aux/config.rpath
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+autoreconf-2.73: running: aclocal --force -I m4
+autoreconf-2.73: configure.ac: tracing
+autoreconf-2.73: configure.ac: not using Libtool
+autoreconf-2.73: configure.ac: not using Intltool
+autoreconf-2.73: configure.ac: not using Gtkdoc
+autoreconf-2.73: configure.ac: not running autopoint a second time
+autoreconf-2.73: running: aclocal --force -I m4 -I m4
+autoreconf-2.73: running: /usr/bin/autoconf-2.73 --force
+configure.ac:51: warning: The macro 'AC_CONFIG_HEADER' is obsolete.
+configure.ac:51: You should run autoupdate.
+../autoconf-2.73/lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
+configure.ac:51: the top level
+configure.ac:309: warning: AC_PROG_LEX without either yywrap or noyywrap is obsolete
+../autoconf-2.73/lib/autoconf/programs.m4:744: _AC_PROG_LEX is expanded from...
+../autoconf-2.73/lib/autoconf/programs.m4:737: AC_PROG_LEX is expanded from...
+configure.ac:309: the top level
+configure.ac:334: warning: The macro 'AC_GNU_SOURCE' is obsolete.
+configure.ac:334: You should run autoupdate.
+../autoconf-2.73/lib/autoconf/specific.m4:486: AC_GNU_SOURCE is expanded from...
+m4/gnulib-comp.m4:34: gl_EARLY is expanded from...
+configure.ac:334: the top level
+configure.ac:334: warning: AC_COMPILE_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS
+../autoconf-2.73/lib/autoconf/specific.m4:486: AC_GNU_SOURCE is expanded from...
+m4/gnulib-comp.m4:34: gl_EARLY is expanded from...
+configure.ac:334: the top level
+configure.ac:344: warning: The macro 'AC_GNU_SOURCE' is obsolete.
+configure.ac:344: You should run autoupdate.
+../autoconf-2.73/lib/autoconf/specific.m4:486: AC_GNU_SOURCE is expanded from...
+configure.ac:344: the top level
+autoreconf-2.73: running: /usr/bin/autoheader-2.73 --force
+autoreconf-2.73: running: automake --add-missing --copy --force-missing
+configure.ac:309: installing 'build-aux/compile'
+configure.ac:42: installing 'build-aux/config.guess'
+configure.ac:42: installing 'build-aux/config.sub'
+configure.ac:48: installing 'build-aux/install-sh'
+configure.ac:48: installing 'build-aux/missing'
+Makefile.am: installing 'build-aux/depcomp'
+parallel-tests: installing 'build-aux/test-driver'
+docs/Makefile.am:4: installing 'build-aux/mdate-sh'
+docs/Makefile.am:4: installing 'build-aux/texinfo.tex'
+autoreconf-2.73: 'build-aux/config.sub' is updated
+autoreconf-2.73: 'build-aux/config.guess' is updated
+autoreconf-2.73: configure.ac: not running make: --make not given
+autoreconf-2.73: Leaving directory '.'

@@ -1,0 +1,6 @@
+make: Entering directory '/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/out'
+scripts/kconfig/conf --olddefconfig /c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig
+#
+# configuration written to .config
+#
+make: Leaving directory '/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/out'

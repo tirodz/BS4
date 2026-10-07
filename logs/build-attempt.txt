@@ -1,0 +1,10 @@
+Command: cmake -B build .
+Working directory: C:\Users\Syf\Desktop\BS4\orbital
+Result: PowerShell could not find `cmake` (no CMake executable is installed or on PATH). No build directory or compiler output was produced.
+
+Source inspection after the failed invocation:
+- `CMakeLists.txt` requires SDL2, imgui, fmt, RapidJSON, Vulkan, and ZLIB, then includes `externals/core.cmake` if present; otherwise it deliberately calls `message(FATAL_ERROR ...)` stating that the unreleased core/QEMU integration is missing.
+- `src/orbital/core.h` deliberately emits a compile-time error if `externals/core.h` is absent.
+- Both `externals/core.cmake` and `externals/core.h` are absent from the checked-out upstream tree. This is not a Windows compatibility error and there is no justified local patch to make around it.
+
+No firmware or system files were present under `C:\Users\Syf\Desktop\BS4\firmware` (the directory itself is absent). No emulator run was possible.

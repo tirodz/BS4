@@ -1,0 +1,306 @@
+  CC      qom/cpu.o
+  CXX     ui/orbital-stats.o
+  CC      ui/console.o
+  CC      ui/cursor.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CC      ui/qemu-pixman.o
+  CC      ui/input.o
+  CC      ui/input-keymap.o
+  CC      ui/input-legacy.o
+  CC      ui/vnc.o
+  CC      ui/vnc-enc-zlib.o
+  CC      ui/vnc-enc-hextile.o
+  CC      ui/vnc-enc-tight.o
+  CC      ui/vnc-palette.o
+  CC      ui/vnc-enc-zrle.o
+  CC      ui/vnc-auth-vencrypt.o
+  CC      ui/vnc-ws.o
+  CC      ui/vnc-jobs.o
+  CC      ui/vk-helpers.o
+  CXX     ui/imgui/imgui.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/imgui/imgui_draw.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/imgui/imgui_demo.o
+In file included from ui/imgui/imgui.cpp:858:
+ui/imgui/imgui_internal.h: In constructor 'ImGuiInputTextState::ImGuiInputTextState()':
+ui/imgui/imgui_internal.h:520:61: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct ImGuiInputTextState' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+  520 |     ImGuiInputTextState()                           { memset(this, 0, sizeof(*this)); }
+      |                                                       ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+ui/imgui/imgui_internal.h:501:18: note: 'struct ImGuiInputTextState' declared here
+  501 | struct IMGUI_API ImGuiInputTextState
+      |                  ^~~~~~~~~~~~~~~~~~~
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+In file included from ui/imgui/imgui_draw.cpp:31:
+ui/imgui/imgui_internal.h: In constructor 'ImGuiInputTextState::ImGuiInputTextState()':
+ui/imgui/imgui_internal.h:520:61: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct ImGuiInputTextState' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+  520 |     ImGuiInputTextState()                           { memset(this, 0, sizeof(*this)); }
+      |                                                       ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+ui/imgui/imgui_internal.h:501:18: note: 'struct ImGuiInputTextState' declared here
+  501 | struct IMGUI_API ImGuiInputTextState
+      |                  ^~~~~~~~~~~~~~~~~~~
+  CXX     ui/imgui/imgui_widgets.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+In file included from ui/imgui/imgui_widgets.cpp:38:
+ui/imgui/imgui_internal.h: In constructor 'ImGuiInputTextState::ImGuiInputTextState()':
+ui/imgui/imgui_internal.h:520:61: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct ImGuiInputTextState' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+  520 |     ImGuiInputTextState()                           { memset(this, 0, sizeof(*this)); }
+      |                                                       ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+ui/imgui/imgui_internal.h:501:18: note: 'struct ImGuiInputTextState' declared here
+  501 | struct IMGUI_API ImGuiInputTextState
+      |                  ^~~~~~~~~~~~~~~~~~~
+  CXX     ui/imgui/imgui_impl_vulkan.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/imgui/cimgui_auto.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/imgui/imgui_impl_sdl.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+In file included from ui/imgui/cimgui_auto.cpp:5:
+ui/imgui/imgui_internal.h: In constructor 'ImGuiInputTextState::ImGuiInputTextState()':
+ui/imgui/imgui_internal.h:520:61: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct ImGuiInputTextState' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+  520 |     ImGuiInputTextState()                           { memset(this, 0, sizeof(*this)); }
+      |                                                       ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+ui/imgui/imgui_internal.h:501:18: note: 'struct ImGuiInputTextState' declared here
+  501 | struct IMGUI_API ImGuiInputTextState
+      |                  ^~~~~~~~~~~~~~~~~~~
+  CC      ui/sdl2.o
+  CC      ui/sdl2-input.o
+  CC      ui/sdl2-2d.o
+  CC      chardev/char.o
+  CC      chardev/char-console.o
+  CC      chardev/char-fe.o
+  CC      chardev/char-file.o
+  CC      chardev/char-io.o
+  CC      chardev/char-mux.o
+  CC      chardev/char-null.o
+  CC      chardev/char-pipe.o
+  CC      chardev/char-ringbuf.o
+  CC      chardev/char-serial.o
+  CC      chardev/char-socket.o
+  CC      chardev/char-stdio.o
+  CC      chardev/char-udp.o
+  CC      chardev/char-win.o
+  CC      chardev/char-win-stdio.o
+  AS      optionrom/multiboot.o
+  AS      optionrom/linuxboot.o
+  LINK    qemu-ga.exe
+  CC      optionrom/linuxboot_dma.o
+  CC      block.o
+  AS      optionrom/kvmvapic.o
+  CC      vl.o
+  BUILD   optionrom/multiboot.img
+  BUILD   optionrom/linuxboot.img
+ld: multiboot.img:.text: section below image base
+ld: linuxboot.img:.text: section below image base
+  BUILD   optionrom/linuxboot_dma.img
+  BUILD   optionrom/kvmvapic.img
+ld: linuxboot_dma.img:.text: section below image base
+ld: linuxboot_dma.img:.rdata: section below image base
+ld: kvmvapic.img:.text: section below image base
+  BUILD   optionrom/multiboot.raw
+  BUILD   optionrom/linuxboot.raw
+  BUILD   optionrom/linuxboot_dma.raw
+  BUILD   optionrom/kvmvapic.raw
+  SIGN    optionrom/multiboot.bin
+  SIGN    optionrom/linuxboot.bin
+  SIGN    optionrom/linuxboot_dma.bin
+  SIGN    optionrom/kvmvapic.bin
+vl.c: In function 'parse_fw_cfg':
+vl.c:2332:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+ 2332 |         buf = g_memdup(str, size);
+      |         ^~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from vl.c:25:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  LINK    qemu-img.exe
+  LINK    qemu-io.exe
+  GEN     ps4-softmmu/hmp-commands.h
+  GEN     ps4-softmmu/hmp-commands-info.h
+  GEN     ps4-softmmu/config-target.h
+  CC      ps4-softmmu/exec.o
+  CC      ps4-softmmu/tcg/tcg.o
+  CC      ps4-softmmu/tcg/tcg-op.o
+  CC      ps4-softmmu/tcg/tcg-op-vec.o
+  CC      ps4-softmmu/tcg/tcg-op-gvec.o
+  CC      ps4-softmmu/tcg/tcg-common.o
+  CC      ps4-softmmu/tcg/optimize.o
+  CC      ps4-softmmu/fpu/softfloat.o
+  CC      ps4-softmmu/disas.o
+  GEN     ps4-softmmu/gdbstub-xml.c
+  CC      ps4-softmmu/arch_init.o
+  CC      ps4-softmmu/cpus.o
+  CC      ps4-softmmu/monitor.o
+  CC      ps4-softmmu/gdbstub.o
+  CC      ps4-softmmu/balloon.o
+  CC      ps4-softmmu/ioport.o
+  CC      ps4-softmmu/numa.o
+  CC      ps4-softmmu/qtest.o
+  CC      ps4-softmmu/memory.o
+  CC      ps4-softmmu/memory_mapping.o
+  CC      ps4-softmmu/dump.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/memory.c: In function 'memory_region_escape_name':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/memory.c:1100:8: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+ 1100 |        return g_memdup(name, bytes + 1);
+      |        ^~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/memory.c:16:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      ps4-softmmu/migration/ram.o
+  CC      ps4-softmmu/accel/accel.o
+  CC      ps4-softmmu/accel/stubs/hvf-stub.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/dump.c: In function 'create_header32':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/dump.c:817:5: warning: 'strncpy' output truncated before terminating nul copying 8 bytes from a string of the same length [-Wstringop-truncation]
+  817 |     strncpy(dh->signature, KDUMP_SIGNATURE, strlen(KDUMP_SIGNATURE));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/dump.c: In function 'create_header64':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/dump.c:929:5: warning: 'strncpy' output truncated before terminating nul copying 8 bytes from a string of the same length [-Wstringop-truncation]
+  929 |     strncpy(dh->signature, KDUMP_SIGNATURE, strlen(KDUMP_SIGNATURE));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC      ps4-softmmu/accel/stubs/whpx-stub.o
+  CC      ps4-softmmu/accel/stubs/kvm-stub.o
+  CC      ps4-softmmu/accel/tcg/tcg-all.o
+  CC      ps4-softmmu/accel/tcg/cputlb.o
+  CC      ps4-softmmu/accel/tcg/tcg-runtime.o
+  CC      ps4-softmmu/accel/tcg/tcg-runtime-gvec.o
+  CC      ps4-softmmu/accel/tcg/cpu-exec.o
+  CC      ps4-softmmu/accel/tcg/cpu-exec-common.o
+  CC      ps4-softmmu/accel/tcg/translate-all.o
+  CC      ps4-softmmu/accel/tcg/translator.o
+  CC      ps4-softmmu/hw/block/virtio-blk.o
+  CC      ps4-softmmu/hw/block/dataplane/virtio-blk.o
+  CC      ps4-softmmu/hw/char/virtio-serial-bus.o
+  CC      ps4-softmmu/hw/core/generic-loader.o
+  CC      ps4-softmmu/hw/core/null-machine.o
+  CC      ps4-softmmu/hw/display/vga.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/char/virtio-serial-bus.c: In function 'virtio_serial_save_device':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/char/virtio-serial-bus.c:667:23: warning: taking address of packed member of 'struct virtio_console_config' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  667 |     qemu_put_be16s(f, &config.cols);
+      |                       ^~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/char/virtio-serial-bus.c:668:23: warning: taking address of packed member of 'struct virtio_console_config' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  668 |     qemu_put_be16s(f, &config.rows);
+      |                       ^~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/char/virtio-serial-bus.c:669:23: warning: taking address of packed member of 'struct virtio_console_config' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  669 |     qemu_put_be32s(f, &config.max_nr_ports);
+      |                       ^~~~~~~~~~~~~~~~~~~~
+  CC      ps4-softmmu/hw/display/virtio-gpu.o
+  CC      ps4-softmmu/hw/display/virtio-gpu-3d.o
+  CC      ps4-softmmu/hw/display/virtio-gpu-pci.o
+  CC      ps4-softmmu/hw/display/virtio-vga.o
+  CC      ps4-softmmu/hw/intc/apic.o
+  CC      ps4-softmmu/hw/intc/apic_common.o
+  CC      ps4-softmmu/hw/intc/ioapic.o
+  CC      ps4-softmmu/hw/isa/lpc_ich9.o
+  CC      ps4-softmmu/hw/misc/pvpanic.o
+  CC      ps4-softmmu/hw/misc/mmio_interface.o
+  CC      ps4-softmmu/hw/net/virtio-net.o
+  CC      ps4-softmmu/hw/net/vhost_net.o
+  CC      ps4-softmmu/hw/ps4/aeolia_acpi.o
+  CC      ps4-softmmu/hw/ps4/aeolia_ahci.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/net/virtio-net.c: In function 'virtio_net_handle_ctrl':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/net/virtio-net.c:999:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  999 |         iov2 = iov = g_memdup(elem->out_sg, sizeof(struct iovec) * elem->out_num);
+      |         ^~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/net/virtio-net.c:14:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      ps4-softmmu/hw/ps4/aeolia_dmac.o
+  CC      ps4-softmmu/hw/ps4/aeolia_gbe.o
+  CC      ps4-softmmu/hw/ps4/aeolia_mem.o
+  CC      ps4-softmmu/hw/ps4/aeolia_pcie.o
+  CC      ps4-softmmu/hw/ps4/aeolia_sdhci.o
+  CC      ps4-softmmu/hw/ps4/aeolia_uart.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_mem.c: In function 'aeolia_mem_read':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_mem.c:50:41: warning: format '%lX' expects argument of type 'long unsigned int', but argument 2 has type 'hwaddr' {aka 'long long unsigned int'} [-Wformat=]
+   50 |     printf("aeolia_mem_read:  { addr: %lX, size: %X }\n", addr, size);
+      |                                       ~~^                 ~~~~
+      |                                         |                 |
+      |                                         long unsigned int hwaddr {aka long long unsigned int}
+      |                                       %llX
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_mem.c: In function 'aeolia_mem_write':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_mem.c:57:41: warning: format '%lX' expects argument of type 'long unsigned int', but argument 2 has type 'hwaddr' {aka 'long long unsigned int'} [-Wformat=]
+   57 |     printf("aeolia_mem_write: { addr: %lX, size: %X, value: %lX }\n", addr, size, value);
+      |                                       ~~^                             ~~~~
+      |                                         |                             |
+      |                                         long unsigned int             hwaddr {aka long long unsigned int}
+      |                                       %llX
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_mem.c:57:63: warning: format '%lX' expects argument of type 'long unsigned int', but argument 4 has type 'uint64_t' {aka 'long long unsigned int'} [-Wformat=]
+   57 |     printf("aeolia_mem_write: { addr: %lX, size: %X, value: %lX }\n", addr, size, value);
+      |                                                             ~~^                   ~~~~~
+      |                                                               |                   |
+      |                                                               long unsigned int   uint64_t {aka long long unsigned int}
+      |                                                             %llX
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_pcie.c:297:13: warning: 'sflash_erase' defined but not used [-Wunused-function]
+  297 | static void sflash_erase(AeoliaPCIEState *s, uint32_t offset, uint32_t size)
+      |             ^~~~~~~~~~~~
+  CC      ps4-softmmu/hw/ps4/aeolia_xhci.o
+  CC      ps4-softmmu/hw/ps4/liverpool_func.o
+  CC      ps4-softmmu/hw/ps4/liverpool_gc.o
+  CC      ps4-softmmu/hw/ps4/liverpool_hdac.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: In function 'xhci_fire_ctl_transfer':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:1737:9: error: 'return' with no value, in function returning non-void [-Wreturn-mismatch]
+ 1737 |         return;
+      |         ^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:1720:12: note: declared here
+ 1720 | static int xhci_fire_ctl_transfer(XHCIState *xhci, XHCITransfer *xfer)
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: In function 'xhci_kick_epctx':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:2004:21: warning: variable 'type' set but not used [-Wunused-but-set-variable=]
+ 2004 |             TRBType type;
+      |                     ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: In function 'aeolia_xhci_realize':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3725:5: warning: implicit declaration of function 'qdev_set_id'; did you mean 'qdev_get_vmsd'? [-Wimplicit-function-declaration]
+ 3725 |     qdev_set_id(dev, "aeolia_xhci_root");
+      |     ^~~~~~~~~~~
+      |     qdev_get_vmsd
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3725:5: warning: nested extern declaration of 'qdev_set_id' [-Wnested-externs]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: At top level:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:492:20: warning: 'ep_state_name' defined but not used [-Wunused-function]
+  492 | static const char *ep_state_name(uint32_t state)
+      |                    ^~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:486:20: warning: 'event_name' defined but not used [-Wunused-function]
+  486 | static const char *event_name(XHCIEvent *event)
+      |                    ^~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:480:20: warning: 'trb_name' defined but not used [-Wunused-function]
+  480 | static const char *trb_name(XHCITRB *trb)
+      |                    ^~~~~~~~
+make[1]: *** [/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/rules.mak:66: hw/ps4/aeolia_xhci.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_hdac.c: In function 'liverpool_hdac_read':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_hdac.c:60:45: warning: format '%lX' expects argument of type 'long unsigned int', but argument 2 has type 'hwaddr' {aka 'long long unsigned int'} [-Wformat=]
+   60 |     printf("liverpool_hdac_read:  { addr: %lX, size: %X }\n", addr, size);
+      |                                           ~~^                 ~~~~
+      |                                             |                 |
+      |                                             long unsigned int hwaddr {aka long long unsigned int}
+      |                                           %llX
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_hdac.c: In function 'liverpool_hdac_write':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_hdac.c:70:45: warning: format '%lX' expects argument of type 'long unsigned int', but argument 2 has type 'hwaddr' {aka 'long long unsigned int'} [-Wformat=]
+   70 |     printf("liverpool_hdac_write: { addr: %lX, size: %X, value: %lX }\n", addr, size, value);
+      |                                           ~~^                             ~~~~
+      |                                             |                             |
+      |                                             long unsigned int             hwaddr {aka long long unsigned int}
+      |                                           %llX
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_hdac.c:70:67: warning: format '%lX' expects argument of type 'long unsigned int', but argument 4 has type 'uint64_t' {aka 'long long unsigned int'} [-Wformat=]
+   70 |     printf("liverpool_hdac_write: { addr: %lX, size: %X, value: %lX }\n", addr, size, value);
+      |                                                                 ~~^                   ~~~~~
+      |                                                                   |                   |
+      |                                                                   long unsigned int   uint64_t {aka long long unsigned int}
+      |                                                                 %llX
+make: *** [Makefile:478: subdir-ps4-softmmu] Error 2

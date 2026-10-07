@@ -1,0 +1,34 @@
+diff --git a/build.sh b/build.sh
+index ae8fd82..2b582f3 100755
+--- a/build.sh
++++ b/build.sh
+@@ -11,8 +11,11 @@ path_bios=$(realpath ./orbital-bios)
+ path_grub=$(realpath ./orbital-grub)
+ path_qemu=$(realpath ./orbital-qemu)
+ path_orbital=$(pwd)
++path_glslang=$(realpath ./../tools/glslang-install)
+ 
+-eflags_qemu="--enable-debug-info"
++eflags_qemu="--enable-debug-info --disable-nettle --enable-gcrypt"
++cflags_qemu="${CFLAGS:--g} -std=gnu11 -Wno-error=implicit-function-declaration -I${path_glslang}/include"
++ldflags_qemu="${LDFLAGS:+${LDFLAGS} }-L${path_glslang}/lib"
+ 
+ function print_help() {
+     usage_text="Usage: $(basename "$0") [option] -- Orbital build script
+@@ -45,8 +48,15 @@ function build_grub() {
+ function build_qemu() {
+     cd "${path_qemu}" || exit 1
+ 
++    if [[ ! -e "${path_glslang}/include/SPIRV/SpvBuilder.h" || \
++          ! -e "${path_glslang}/lib/libSPIRV.a" ]]; then
++        echo >&2 "Missing the pinned local glslang 7.11.3214 install at ${path_glslang}"
++        exit 1
++    fi
++
+     if [[ ! -e ./config-host.mak ]]; then
+-        ./configure --target-list=ps4-softmmu \
++        CC="${CC:-/mingw64/bin/gcc}" CFLAGS="${cflags_qemu}" \
++        LDFLAGS="${ldflags_qemu}" ./configure --target-list=ps4-softmmu \
+             --enable-sdl --enable-vulkan --enable-debug --disable-capstone \
+             --enable-hax --enable-libusb ${eflags_qemu}
+     fi

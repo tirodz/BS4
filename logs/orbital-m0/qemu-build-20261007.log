@@ -1,0 +1,1225 @@
+  AR      libqemuutil.a
+  CC      vl.o
+  CC      qapi/qapi-commands-block.o
+  CC      qapi/qapi-commands-char.o
+  CC      qapi/qapi-commands-common.o
+  CC      qapi/qapi-commands-crypto.o
+  CC      qapi/qapi-commands-introspect.o
+vl.c: In function 'parse_fw_cfg':
+vl.c:2332:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+ 2332 |         buf = g_memdup(str, size);
+      |         ^~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from vl.c:25:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      qapi/qapi-commands-migration.o
+  CC      qapi/qapi-commands-misc.o
+  CC      qapi/qapi-commands-net.o
+  CC      qapi/qapi-commands-rocker.o
+  CC      qapi/qapi-commands-run-state.o
+  CC      qapi/qapi-commands-sockets.o
+  CC      qapi/qapi-commands-tpm.o
+  CC      qapi/qapi-commands-trace.o
+  CC      qapi/qapi-commands-transaction.o
+  CC      qapi/qapi-commands-ui.o
+  CC      qmp.o
+  CC      hmp.o
+  CC      cpus-common.o
+  CC      audio/audio.o
+  CC      audio/noaudio.o
+  CC      audio/wavaudio.o
+  CC      audio/mixeng.o
+  CC      audio/dsoundaudio.o
+  CC      audio/audio_win_int.o
+  CC      audio/wavcapture.o
+  CC      backends/rng.o
+  CC      backends/rng-egd.o
+  CC      backends/tpm.o
+  CC      backends/hostmem.o
+  CC      backends/hostmem-ram.o
+  CC      backends/cryptodev.o
+  CC      backends/cryptodev-builtin.o
+  CC      backends/cryptodev-vhost.o
+  CC      block/stream.o
+  CC      chardev/msmouse.o
+  CC      chardev/wctablet.o
+  CC      chardev/testdev.o
+  CC      disas/i386.o
+  CC      hw/acpi/core.o
+  CC      hw/acpi/piix4.o
+  CC      hw/acpi/pcihp.o
+  CC      hw/acpi/ich9.o
+hw/acpi/core.c: In function 'acpi_pm1_cnt_init':
+hw/acpi/core.c:630:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  630 |         fw_cfg_add_file(fw_cfg, "etc/system-states", g_memdup(suspend, 6), 6);
+      |         ^~~~~~~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from hw/acpi/core.c:22:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      hw/acpi/tco.o
+  CC      hw/acpi/cpu_hotplug.o
+  CC      hw/acpi/memory_hotplug.o
+  CC      hw/acpi/cpu.o
+  CC      hw/acpi/nvdimm.o
+  CC      hw/acpi/vmgenid.o
+  CC      hw/acpi/acpi_interface.o
+  CC      hw/acpi/bios-linker-loader.o
+hw/acpi/nvdimm.c: In function 'nvdimm_dsm_func_read_fit':
+hw/acpi/nvdimm.c:547:18: warning: taking address of packed member of 'struct NvdimmFuncReadFITIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  547 |     le32_to_cpus(&read_fit->offset);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/acpi/nvdimm.c: In function 'nvdimm_dsm_get_label_data':
+hw/acpi/nvdimm.c:708:18: warning: taking address of packed member of 'struct NvdimmFuncGetLabelDataIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  708 |     le32_to_cpus(&get_label_data->offset);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/acpi/nvdimm.c:709:18: warning: taking address of packed member of 'struct NvdimmFuncGetLabelDataIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  709 |     le32_to_cpus(&get_label_data->length);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/acpi/nvdimm.c: In function 'nvdimm_dsm_set_label_data':
+hw/acpi/nvdimm.c:747:18: warning: taking address of packed member of 'struct NvdimmFuncSetLabelDataIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  747 |     le32_to_cpus(&set_label_data->offset);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/acpi/nvdimm.c:748:18: warning: taking address of packed member of 'struct NvdimmFuncSetLabelDataIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  748 |     le32_to_cpus(&set_label_data->length);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/acpi/nvdimm.c: In function 'nvdimm_dsm_write':
+hw/acpi/nvdimm.c:843:18: warning: taking address of packed member of 'struct NvdimmDsmIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  843 |     le32_to_cpus(&in->revision);
+      |                  ^~~~~~~~~~~~~
+hw/acpi/nvdimm.c:844:18: warning: taking address of packed member of 'struct NvdimmDsmIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  844 |     le32_to_cpus(&in->function);
+      |                  ^~~~~~~~~~~~~
+hw/acpi/nvdimm.c:845:18: warning: taking address of packed member of 'struct NvdimmDsmIn' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  845 |     le32_to_cpus(&in->handle);
+      |                  ^~~~~~~~~~~
+  CC      hw/acpi/aml-build.o
+  CC      hw/acpi/ipmi.o
+  CC      hw/acpi/acpi-stub.o
+  CC      hw/acpi/ipmi-stub.o
+  CC      hw/audio/sb16.o
+  CC      hw/audio/es1370.o
+  CC      hw/audio/ac97.o
+  CC      hw/audio/fmopl.o
+  CC      hw/audio/adlib.o
+  CC      hw/audio/gus.o
+  CC      hw/audio/gusemu_hal.o
+  CC      hw/audio/gusemu_mixer.o
+hw/audio/adlib.c: In function 'adlib_callback':
+hw/audio/adlib.c:190:18: warning: variable 'net' set but not used [-Wunused-but-set-variable=]
+  190 |     int samples, net = 0, to_play, written;
+      |                  ^~~
+  CC      hw/audio/cs4231a.o
+  CC      hw/audio/intel-hda.o
+  CC      hw/audio/hda-codec.o
+  CC      hw/audio/pcspk.o
+  CC      hw/audio/soundhw.o
+  CC      hw/block/block.o
+  CC      hw/block/cdrom.o
+  CC      hw/block/hd-geometry.o
+  CC      hw/block/fdc.o
+  CC      hw/block/pflash_cfi01.o
+  CC      hw/block/nvme.o
+  CC      hw/bt/core.o
+  CC      hw/bt/l2cap.o
+  CC      hw/bt/sdp.o
+  CC      hw/bt/hci.o
+  CC      hw/bt/hid.o
+  CC      hw/bt/hci-csr.o
+  CC      hw/char/ipoctal232.o
+  CC      hw/char/parallel.o
+  CC      hw/char/parallel-isa.o
+  CC      hw/char/serial.o
+  CC      hw/char/serial-isa.o
+  CC      hw/char/serial-pci.o
+  CC      hw/char/virtio-console.o
+  CC      hw/char/debugcon.o
+  CC      hw/core/qdev.o
+  CC      hw/core/qdev-properties.o
+  CC      hw/core/bus.o
+  CC      hw/core/reset.o
+  CC      hw/core/qdev-fw.o
+  CC      hw/core/fw-path-provider.o
+  CC      hw/core/irq.o
+  CC      hw/core/hotplug.o
+  CC      hw/core/nmi.o
+  CC      hw/core/sysbus.o
+  CC      hw/core/machine.o
+  CC      hw/core/loader.o
+  CC      hw/core/qdev-properties-system.o
+hw/core/machine.c: In function 'machine_query_hotpluggable_cpus':
+hw/core/machine.c:409:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  409 |         cpu_item->props = g_memdup(&machine->possible_cpus->cpus[i].props,
+      |         ^~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from hw/core/machine.c:13:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      hw/core/register.o
+  CC      hw/core/or-irq.o
+  CC      hw/core/split-irq.o
+  CC      hw/cpu/core.o
+  CC      hw/display/cirrus_vga.o
+  CC      hw/display/vga-pci.o
+  CC      hw/display/vga-isa.o
+  CC      hw/display/vmware_vga.o
+  CC      hw/dma/i8257.o
+  CC      hw/i2c/core.o
+  CC      hw/i2c/smbus.o
+  CC      hw/i2c/smbus_eeprom.o
+  CC      hw/i2c/smbus_ich9.o
+  CC      hw/i2c/pm_smbus.o
+  CC      hw/ide/core.o
+  CC      hw/ide/atapi.o
+  CC      hw/ide/qdev.o
+  CC      hw/ide/pci.o
+  CC      hw/ide/isa.o
+  CC      hw/ide/piix.o
+  CC      hw/ide/ahci.o
+  CC      hw/ide/ich.o
+  CC      hw/input/hid.o
+  CC      hw/input/pckbd.o
+  CC      hw/input/ps2.o
+  CC      hw/input/virtio-input.o
+  CC      hw/input/virtio-input-hid.o
+  CC      hw/intc/i8259_common.o
+  CC      hw/intc/i8259.o
+  CC      hw/intc/ioapic_common.o
+  CC      hw/intc/intc.o
+  CC      hw/ipack/ipack.o
+  CC      hw/ipack/tpci200.o
+  CC      hw/ipmi/ipmi.o
+  CC      hw/ipmi/ipmi_bmc_sim.o
+  CC      hw/ipmi/ipmi_bmc_extern.o
+  CC      hw/ipmi/isa_ipmi_kcs.o
+  CC      hw/ipmi/isa_ipmi_bt.o
+  CC      hw/isa/isa-bus.o
+  CC      hw/isa/isa-superio.o
+  CC      hw/isa/smc37c669-superio.o
+  CC      hw/isa/apm.o
+  CC      hw/mem/pc-dimm.o
+  CC      hw/mem/nvdimm.o
+  CC      hw/misc/applesmc.o
+  CC      hw/misc/debugexit.o
+  CC      hw/misc/sga.o
+  CC      hw/misc/pc-testdev.o
+  CC      hw/misc/pci-testdev.o
+  CC      hw/misc/edu.o
+  CC      hw/misc/unimp.o
+  CC      hw/net/ne2000.o
+  CC      hw/net/eepro100.o
+  CC      hw/net/pcnet-pci.o
+  CC      hw/net/pcnet.o
+  CC      hw/net/e1000.o
+hw/net/eepro100.c: In function 'e100_nic_realize':
+hw/net/eepro100.c:1873:5: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+ 1873 |     s->vmstate = g_memdup(&vmstate_eepro100, sizeof(vmstate_eepro100));
+      |     ^
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from hw/net/eepro100.c:43:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      hw/net/e1000x_common.o
+  CC      hw/net/net_tx_pkt.o
+  CC      hw/net/net_rx_pkt.o
+  CC      hw/net/e1000e.o
+  CC      hw/net/e1000e_core.o
+  CC      hw/net/rtl8139.o
+  CC      hw/net/ne2000-isa.o
+hw/net/rtl8139.c: In function 'rtl8139_cplus_transmit_one':
+hw/net/rtl8139.c:2154:21: warning: variable 'send_count' set but not used [-Wunused-but-set-variable=]
+ 2154 |                 int send_count = 0;
+      |                     ^~~~~~~~~~
+  CC      hw/net/rocker/rocker.o
+  CC      hw/net/rocker/rocker_fp.o
+  CC      hw/net/rocker/rocker_desc.o
+  CC      hw/net/rocker/rocker_world.o
+hw/net/rocker/rocker.c: In function 'tx_consume':
+hw/net/rocker/rocker.c:165:14: warning: variable 'tx_l3_csum_off' set but not used [-Wunused-but-set-variable=]
+  165 |     uint16_t tx_l3_csum_off = 0;
+      |              ^~~~~~~~~~~~~~
+  CC      hw/net/rocker/rocker_of_dpa.o
+  CC      hw/net/can/can_sja1000.o
+  CC      hw/net/can/can_kvaser_pci.o
+  CC      hw/net/can/can_pcm3680_pci.o
+  CC      hw/net/can/can_mioe3680_pci.o
+  CC      hw/nvram/eeprom93xx.o
+  CC      hw/nvram/eeprom_at24c.o
+  CC      hw/nvram/fw_cfg.o
+  CC      hw/nvram/chrp_nvram.o
+  CC      hw/pci-bridge/pci_bridge_dev.o
+hw/nvram/fw_cfg.c: In function 'fw_cfg_reboot':
+hw/nvram/fw_cfg.c:208:5: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  208 |     fw_cfg_add_file(s, "etc/boot-fail-wait", g_memdup(&reboot_timeout, 4), 4);
+      |     ^~~~~~~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from hw/nvram/fw_cfg.c:25:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+hw/nvram/fw_cfg.c: In function 'fw_cfg_add_string':
+hw/nvram/fw_cfg.c:627:5: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  627 |     fw_cfg_add_bytes(s, key, g_memdup(value, sz), sz);
+      |     ^~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      hw/pci-bridge/pcie_root_port.o
+  CC      hw/pci-bridge/gen_pcie_root_port.o
+  CC      hw/pci-bridge/pcie_pci_bridge.o
+  CC      hw/pci-bridge/pci_expander_bridge.o
+  CC      hw/pci-bridge/xio3130_upstream.o
+  CC      hw/pci-bridge/xio3130_downstream.o
+  CC      hw/pci-bridge/ioh3420.o
+  CC      hw/pci-bridge/i82801b11.o
+  CC      hw/pci-host/pam.o
+  CC      hw/pci-host/piix.o
+  CC      hw/pci-host/q35.o
+  CC      hw/pci/pci.o
+  CC      hw/pci/pci_bridge.o
+  CC      hw/pci/msix.o
+  CC      hw/pci/msi.o
+  CC      hw/pci/shpc.o
+  CC      hw/pci/slotid_cap.o
+  CC      hw/pci/pci_host.o
+  CC      hw/pci/pcie_host.o
+  CC      hw/pci/pcie.o
+  CC      hw/pci/pcie_aer.o
+  CC      hw/pci/pcie_port.o
+  CC      hw/pci/pci-stub.o
+  CC      hw/pcmcia/pcmcia.o
+  CC      hw/scsi/scsi-disk.o
+  CC      hw/scsi/scsi-generic.o
+  CC      hw/scsi/scsi-bus.o
+  CC      hw/scsi/lsi53c895a.o
+  CC      hw/scsi/mptsas.o
+  CC      hw/scsi/mptconfig.o
+  CC      hw/scsi/mptendian.o
+  CC      hw/scsi/megasas.o
+hw/scsi/mptsas.c: In function 'mptsas_process_scsi_task_mgmt':
+hw/scsi/mptsas.c:458:17: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  458 |                 reply_async = g_memdup(&reply, sizeof(MPIMsgSCSITaskMgmtReply));
+      |                 ^~~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from hw/scsi/mptsas.c:25:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+hw/scsi/mptsas.c:485:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  485 |         reply_async = g_memdup(&reply, sizeof(MPIMsgSCSITaskMgmtReply));
+      |         ^~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      hw/scsi/vmw_pvscsi.o
+  CC      hw/scsi/esp.o
+hw/scsi/mptendian.c: In function 'mptsas_fix_sgentry_endianness':
+hw/scsi/mptendian.c:38:18: warning: taking address of packed member of 'struct MPISGEntry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   38 |     le32_to_cpus(&sge->FlagsLength);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:40:21: warning: taking address of packed member of 'struct MPISGEntry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   40 |        le64_to_cpus(&sge->u.Address64);
+      |                     ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:42:21: warning: taking address of packed member of 'struct MPISGEntry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   42 |        le32_to_cpus(&sge->u.Address32);
+      |                     ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_sgentry_endianness_reply':
+hw/scsi/mptendian.c:49:21: warning: taking address of packed member of 'struct MPISGEntry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   49 |        cpu_to_le64s(&sge->u.Address64);
+      |                     ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:51:21: warning: taking address of packed member of 'struct MPISGEntry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   51 |        cpu_to_le32s(&sge->u.Address32);
+      |                     ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:53:18: warning: taking address of packed member of 'struct MPISGEntry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   53 |     cpu_to_le32s(&sge->FlagsLength);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_scsi_io_endianness':
+hw/scsi/mptendian.c:58:18: warning: taking address of packed member of 'struct MPIMsgSCSIIORequest' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   58 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:59:18: warning: taking address of packed member of 'struct MPIMsgSCSIIORequest' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   59 |     le32_to_cpus(&req->Control);
+      |                  ^~~~~~~~~~~~~
+hw/scsi/mptendian.c:60:18: warning: taking address of packed member of 'struct MPIMsgSCSIIORequest' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   60 |     le32_to_cpus(&req->DataLength);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:61:18: warning: taking address of packed member of 'struct MPIMsgSCSIIORequest' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   61 |     le32_to_cpus(&req->SenseBufferLowAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_scsi_io_reply_endianness':
+hw/scsi/mptendian.c:66:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   66 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:67:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   67 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:68:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   68 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:69:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   69 |     cpu_to_le32s(&reply->TransferCount);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:70:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   70 |     cpu_to_le32s(&reply->SenseCount);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:71:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   71 |     cpu_to_le32s(&reply->ResponseInfo);
+      |                  ^~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:72:18: warning: taking address of packed member of 'struct MPIMsgSCSIIOReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   72 |     cpu_to_le16s(&reply->TaskTag);
+      |                  ^~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_scsi_task_mgmt_endianness':
+hw/scsi/mptendian.c:77:18: warning: taking address of packed member of 'struct MPIMsgSCSITaskMgmt' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   77 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:78:18: warning: taking address of packed member of 'struct MPIMsgSCSITaskMgmt' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   78 |     le32_to_cpus(&req->TaskMsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_scsi_task_mgmt_reply_endianness':
+hw/scsi/mptendian.c:83:18: warning: taking address of packed member of 'struct MPIMsgSCSITaskMgmtReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   83 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:84:18: warning: taking address of packed member of 'struct MPIMsgSCSITaskMgmtReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   84 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:85:18: warning: taking address of packed member of 'struct MPIMsgSCSITaskMgmtReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   85 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:86:18: warning: taking address of packed member of 'struct MPIMsgSCSITaskMgmtReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   86 |     cpu_to_le32s(&reply->TerminationCount);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_ioc_init_endianness':
+hw/scsi/mptendian.c:91:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   91 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:92:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   92 |     le16_to_cpus(&req->ReplyFrameSize);
+      |                  ^~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:93:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   93 |     le32_to_cpus(&req->HostMfaHighAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:94:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   94 |     le32_to_cpus(&req->SenseBufferHighAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:95:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   95 |     le32_to_cpus(&req->ReplyFifoHostSignalingAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:97:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   97 |     le16_to_cpus(&req->MsgVersion);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:98:18: warning: taking address of packed member of 'struct MPIMsgIOCInit' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   98 |     le16_to_cpus(&req->HeaderVersion);
+      |                  ^~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_ioc_init_reply_endianness':
+hw/scsi/mptendian.c:103:18: warning: taking address of packed member of 'struct MPIMsgIOCInitReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  103 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:104:18: warning: taking address of packed member of 'struct MPIMsgIOCInitReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  104 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:105:18: warning: taking address of packed member of 'struct MPIMsgIOCInitReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  105 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_ioc_facts_endianness':
+hw/scsi/mptendian.c:110:18: warning: taking address of packed member of 'struct MPIMsgIOCFacts' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  110 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_ioc_facts_reply_endianness':
+hw/scsi/mptendian.c:115:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  115 |     cpu_to_le16s(&reply->MsgVersion);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:116:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  116 |     cpu_to_le16s(&reply->HeaderVersion);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:117:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  117 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:118:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  118 |     cpu_to_le16s(&reply->IOCExceptions);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:119:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  119 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:120:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  120 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:121:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  121 |     cpu_to_le16s(&reply->ReplyQueueDepth);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:122:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  122 |     cpu_to_le16s(&reply->RequestFrameSize);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:123:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  123 |     cpu_to_le16s(&reply->ProductID);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:124:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  124 |     cpu_to_le32s(&reply->CurrentHostMfaHighAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:125:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  125 |     cpu_to_le16s(&reply->GlobalCredits);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:126:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  126 |     cpu_to_le32s(&reply->CurrentSenseBufferHighAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:127:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  127 |     cpu_to_le16s(&reply->CurReplyFrameSize);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:128:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  128 |     cpu_to_le32s(&reply->FWImageSize);
+      |                  ^~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:129:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  129 |     cpu_to_le32s(&reply->IOCCapabilities);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:130:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  130 |     cpu_to_le16s(&reply->HighPriorityQueueDepth);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:132:18: warning: taking address of packed member of 'struct MPIMsgIOCFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  132 |     cpu_to_le32s(&reply->ReplyFifoHostSignalingAddr);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_config_endianness':
+hw/scsi/mptendian.c:137:18: warning: taking address of packed member of 'struct MPIMsgConfig' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  137 |     le16_to_cpus(&req->ExtPageLength);
+      |                  ^~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:138:18: warning: taking address of packed member of 'struct MPIMsgConfig' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  138 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:139:18: warning: taking address of packed member of 'struct MPIMsgConfig' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  139 |     le32_to_cpus(&req->PageAddress);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_config_reply_endianness':
+hw/scsi/mptendian.c:145:18: warning: taking address of packed member of 'struct MPIMsgConfigReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  145 |     cpu_to_le16s(&reply->ExtPageLength);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:146:18: warning: taking address of packed member of 'struct MPIMsgConfigReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  146 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:147:18: warning: taking address of packed member of 'struct MPIMsgConfigReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  147 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:148:18: warning: taking address of packed member of 'struct MPIMsgConfigReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  148 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_port_facts_endianness':
+hw/scsi/mptendian.c:153:18: warning: taking address of packed member of 'struct MPIMsgPortFacts' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  153 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_port_facts_reply_endianness':
+hw/scsi/mptendian.c:158:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  158 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:159:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  159 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:160:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  160 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:161:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  161 |     cpu_to_le16s(&reply->MaxDevices);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:162:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  162 |     cpu_to_le16s(&reply->PortSCSIID);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:163:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  163 |     cpu_to_le16s(&reply->ProtocolFlags);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:164:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  164 |     cpu_to_le16s(&reply->MaxPostedCmdBuffers);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:165:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  165 |     cpu_to_le16s(&reply->MaxPersistentIDs);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:166:18: warning: taking address of packed member of 'struct MPIMsgPortFactsReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  166 |     cpu_to_le16s(&reply->MaxLanBuckets);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_port_enable_endianness':
+hw/scsi/mptendian.c:171:18: warning: taking address of packed member of 'struct MPIMsgPortEnable' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  171 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_port_enable_reply_endianness':
+hw/scsi/mptendian.c:176:18: warning: taking address of packed member of 'struct MPIMsgPortEnableReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  176 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:177:18: warning: taking address of packed member of 'struct MPIMsgPortEnableReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  177 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:178:18: warning: taking address of packed member of 'struct MPIMsgPortEnableReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  178 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_event_notification_endianness':
+hw/scsi/mptendian.c:183:18: warning: taking address of packed member of 'struct MPIMsgEventNotify' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  183 |     le32_to_cpus(&req->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c: In function 'mptsas_fix_event_notification_reply_endianness':
+hw/scsi/mptendian.c:191:18: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  191 |     cpu_to_le16s(&reply->EventDataLength);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:192:18: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  192 |     cpu_to_le32s(&reply->MsgContext);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:193:18: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  193 |     cpu_to_le16s(&reply->IOCStatus);
+      |                  ^~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:194:18: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  194 |     cpu_to_le32s(&reply->IOCLogInfo);
+      |                  ^~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:195:18: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  195 |     cpu_to_le32s(&reply->Event);
+      |                  ^~~~~~~~~~~~~
+hw/scsi/mptendian.c:196:18: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  196 |     cpu_to_le32s(&reply->EventContext);
+      |                  ^~~~~~~~~~~~~~~~~~~~
+hw/scsi/mptendian.c:200:22: warning: taking address of packed member of 'struct MPIMsgEventNotifyReply' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  200 |         cpu_to_le32s(&reply->Data[i]);
+      |                      ^~~~~~~~~~~~~~~
+  CC      hw/scsi/esp-pci.o
+  CC      hw/sd/sd.o
+  CC      hw/sd/core.o
+  CC      hw/sd/sdmmc-internal.o
+  CC      hw/sd/sdhci.o
+  CC      hw/smbios/smbios.o
+  CC      hw/smbios/smbios_type_38.o
+  CC      hw/smbios/smbios-stub.o
+  CC      hw/smbios/smbios_type_38-stub.o
+  CC      hw/timer/hpet.o
+  CC      hw/timer/i8254_common.o
+  CC      hw/timer/i8254.o
+  CC      hw/tpm/tpm_util.o
+  CC      hw/tpm/tpm_tis.o
+  CC      hw/usb/core.o
+  CC      hw/usb/combined-packet.o
+  CC      hw/usb/bus.o
+  CC      hw/usb/libhw.o
+  CC      hw/usb/desc.o
+  CC      hw/usb/desc-msos.o
+  CC      hw/usb/hcd-uhci.o
+  CC      hw/usb/hcd-ohci.o
+  CC      hw/usb/hcd-ehci.o
+  CC      hw/usb/hcd-ehci-pci.o
+  CC      hw/usb/hcd-xhci.o
+  CC      hw/usb/hcd-xhci-nec.o
+  CC      hw/usb/dev-hub.o
+  CC      hw/usb/dev-hid.o
+hw/usb/hcd-xhci.c: In function 'usb_xhci_init':
+hw/usb/hcd-xhci.c:3314:66: warning: '%d' directive output may be truncated writing between 1 and 10 bytes into a region of size 5 [-Wformat-truncation=]
+ 3314 |             snprintf(port->name, sizeof(port->name), "usb2 port #%d", i+1);
+      |                                                                  ^~
+hw/usb/hcd-xhci.c:3314:54: note: directive argument in the range [1, 2147483647]
+ 3314 |             snprintf(port->name, sizeof(port->name), "usb2 port #%d", i+1);
+      |                                                      ^~~~~~~~~~~~~~~
+hw/usb/hcd-xhci.c:3314:13: note: 'snprintf' output between 13 and 22 bytes into a destination of size 16
+ 3314 |             snprintf(port->name, sizeof(port->name), "usb2 port #%d", i+1);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hw/usb/hcd-xhci.c:3327:66: warning: '%d' directive output may be truncated writing between 1 and 10 bytes into a region of size 5 [-Wformat-truncation=]
+ 3327 |             snprintf(port->name, sizeof(port->name), "usb3 port #%d", i+1);
+      |                                                                  ^~
+hw/usb/hcd-xhci.c:3327:54: note: directive argument in the range [1, 2147483647]
+ 3327 |             snprintf(port->name, sizeof(port->name), "usb3 port #%d", i+1);
+      |                                                      ^~~~~~~~~~~~~~~
+hw/usb/hcd-xhci.c:3327:13: note: 'snprintf' output between 13 and 22 bytes into a destination of size 16
+ 3327 |             snprintf(port->name, sizeof(port->name), "usb3 port #%d", i+1);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC      hw/usb/dev-wacom.o
+  CC      hw/usb/dev-storage.o
+  CC      hw/usb/dev-uas.o
+  CC      hw/usb/dev-audio.o
+  CC      hw/usb/dev-serial.o
+  CC      hw/usb/dev-network.o
+  CC      hw/usb/dev-bluetooth.o
+  CC      hw/usb/dev-smartcard-reader.o
+  CC      hw/usb/host-libusb.o
+  CC      hw/usb/host-stub.o
+  CC      hw/virtio/virtio-rng.o
+  CC      hw/virtio/virtio-pci.o
+hw/usb/host-libusb.c: In function 'usb_host_auto_check':
+hw/usb/host-libusb.c:1637:9: warning: variable 'unconnected' set but not used [-Wunused-but-set-variable=]
+ 1637 |     int unconnected = 0;
+      |         ^~~~~~~~~~~
+  CC      hw/virtio/virtio-bus.o
+  CC      hw/virtio/virtio-mmio.o
+  CC      hw/virtio/vhost-stub.o
+  CC      hw/watchdog/watchdog.o
+  CC      hw/watchdog/wdt_i6300esb.o
+  CC      hw/watchdog/wdt_ib700.o
+  CC      migration/migration.o
+  CC      migration/socket.o
+  CC      migration/fd.o
+  CC      migration/exec.o
+  CC      migration/tls.o
+  CC      migration/channel.o
+  CC      migration/savevm.o
+  CC      migration/colo-comm.o
+  CC      migration/colo.o
+  CC      migration/colo-failover.o
+  CC      migration/vmstate.o
+  CC      migration/vmstate-types.o
+  CC      migration/page_cache.o
+  CC      migration/qemu-file.o
+  CC      migration/global_state.o
+  CC      migration/qemu-file-channel.o
+  CC      migration/xbzrle.o
+  CC      migration/postcopy-ram.o
+  CC      migration/qjson.o
+  CC      migration/block-dirty-bitmap.o
+  CC      migration/block.o
+  CC      net/net.o
+  CC      net/queue.o
+  CC      net/checksum.o
+  CC      net/util.o
+  CC      net/hub.o
+  CC      net/socket.o
+net/checksum.c: In function 'net_checksum_add_iov':
+net/checksum.c:172:23: warning: variable 'buf_off' set but not used [-Wunused-but-set-variable=]
+  172 |     size_t iovec_off, buf_off;
+      |                       ^~~~~~~
+  CC      net/dump.o
+  CC      net/eth.o
+  CC      net/slirp.o
+  CC      net/filter.o
+  CC      net/filter-buffer.o
+  CC      net/filter-mirror.o
+  CC      net/colo-compare.o
+  CC      net/colo.o
+  CC      net/filter-rewriter.o
+  CC      net/filter-replay.o
+net/colo.c: In function 'packet_new':
+net/colo.c:164:5: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  164 |     pkt->data = g_memdup(data, size);
+      |     ^~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from net/colo.c:15:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+net/colo.c: In function 'connection_get':
+net/colo.c:203:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  203 |         ConnectionKey *new_key = g_memdup(key, sizeof(*key));
+      |         ^~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      net/tap-win32.o
+  CC      net/can/can_core.o
+  CC      net/can/can_host.o
+  CC      qom/cpu.o
+net/tap-win32.c: In function 'is_tap_win32_dev':
+net/tap-win32.c:242:58: warning: '%s' directive output may be truncated writing up to 255 bytes into a region of size 178 [-Wformat-truncation=]
+  242 |         snprintf (unit_string, sizeof(unit_string), "%s\\%s",
+      |                                                          ^~
+  243 |                   ADAPTER_KEY, enum_name);
+      |                                ~~~~~~~~~                  
+net/tap-win32.c:242:9: note: 'snprintf' output between 79 and 334 bytes into a destination of size 256
+  242 |         snprintf (unit_string, sizeof(unit_string), "%s\\%s",
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  243 |                   ADAPTER_KEY, enum_name);
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~
+net/tap-win32.c: In function 'get_device_guid':
+net/tap-win32.c:343:19: warning: '%s' directive output may be truncated writing up to 255 bytes into a region of size 176 [-Wformat-truncation=]
+  343 |              "%s\\%s\\Connection",
+      |                   ^~
+  344 |              NETWORK_CONNECTIONS_KEY, enum_name);
+      |                                       ~~~~~~~~~
+net/tap-win32.c:341:9: note: 'snprintf' output between 92 and 347 bytes into a destination of size 256
+  341 |         snprintf(connection_string,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  342 |              sizeof(connection_string),
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  343 |              "%s\\%s\\Connection",
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  344 |              NETWORK_CONNECTIONS_KEY, enum_name);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+net/tap-win32.c: In function 'tap_win32_open':
+net/tap-win32.c:620:52: warning: '%s' directive output may be truncated writing up to 255 bytes into a region of size 245 [-Wformat-truncation=]
+  620 |     snprintf (device_path, sizeof(device_path), "%s%s%s",
+      |                                                    ^~
+  621 |               USERMODEDEVICEDIR,
+  622 |               device_guid,
+      |               ~~~~~~~~~~~                           
+net/tap-win32.c:620:5: note: 'snprintf' output between 16 and 271 bytes into a destination of size 256
+  620 |     snprintf (device_path, sizeof(device_path), "%s%s%s",
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  621 |               USERMODEDEVICEDIR,
+      |               ~~~~~~~~~~~~~~~~~~
+  622 |               device_guid,
+      |               ~~~~~~~~~~~~
+  623 |               TAPSUFFIX);
+      |               ~~~~~~~~~~
+  CC      replay/replay.o
+In file included from qom/cpu.c:25:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_state':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:25:9: error: implicit declaration of function 'hax_cpu_synchronize_state'; did you mean 'whpx_cpu_synchronize_state'? [-Wimplicit-function-declaration]
+   25 |         hax_cpu_synchronize_state(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_state
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:25:9: warning: nested extern declaration of 'hax_cpu_synchronize_state' [-Wnested-externs]
+  CC      replay/replay-internal.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_post_reset':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:38:9: error: implicit declaration of function 'hax_cpu_synchronize_post_reset'; did you mean 'whpx_cpu_synchronize_post_reset'? [-Wimplicit-function-declaration]
+   38 |         hax_cpu_synchronize_post_reset(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_post_reset
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:38:9: warning: nested extern declaration of 'hax_cpu_synchronize_post_reset' [-Wnested-externs]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_post_init':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:51:9: error: implicit declaration of function 'hax_cpu_synchronize_post_init'; did you mean 'whpx_cpu_synchronize_post_init'? [-Wimplicit-function-declaration]
+   51 |         hax_cpu_synchronize_post_init(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_post_init
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:51:9: warning: nested extern declaration of 'hax_cpu_synchronize_post_init' [-Wnested-externs]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_pre_loadvm':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:64:9: error: implicit declaration of function 'hax_cpu_synchronize_pre_loadvm'; did you mean 'whpx_cpu_synchronize_pre_loadvm'? [-Wimplicit-function-declaration]
+   64 |         hax_cpu_synchronize_pre_loadvm(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_pre_loadvm
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:64:9: warning: nested extern declaration of 'hax_cpu_synchronize_pre_loadvm' [-Wnested-externs]
+  CC      replay/replay-events.o
+make: *** [/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/rules.mak:66: qom/cpu.o] Error 1
+make: *** Waiting for unfinished jobs....
+  GEN     config-host.h
+  GEN     trace/generated-tcg-tracers.h
+  GEN     trace/generated-helpers-wrappers.h
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:78: SyntaxWarning: invalid escape sequence '\*'
+  bit = re.sub("\*", "", bit)
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:205: SyntaxWarning: invalid escape sequence '\w'
+  _CRE = re.compile("((?P<props>[\w\s]+)\s+)?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:206: SyntaxWarning: invalid escape sequence '\w'
+  "(?P<name>\w+)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:207: SyntaxWarning: invalid escape sequence '\('
+  "\((?P<args>[^)]*)\)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:208: SyntaxWarning: invalid escape sequence '\s'
+  "\s*"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:209: SyntaxWarning: invalid escape sequence '\s'
+  "(?:(?:(?P<fmt_trans>\".+),)?\s*(?P<fmt>\".+))?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:210: SyntaxWarning: invalid escape sequence '\s'
+  "\s*")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:312: SyntaxWarning: invalid escape sequence '\d'
+  _FMT = re.compile("(%[\d\.]*\w+|%.*?PRI\S+)")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:78: SyntaxWarning: invalid escape sequence '\*'
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:452: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  bit = re.sub("\*", "", bit)
+  if len(format) is 0:
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:457: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:205: SyntaxWarning: invalid escape sequence '\w'
+  _CRE = re.compile("((?P<props>[\w\s]+)\s+)?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:206: SyntaxWarning: invalid escape sequence '\w'
+  if len(backends) is 0:
+  "(?P<name>\w+)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:207: SyntaxWarning: invalid escape sequence '\('
+  "\((?P<args>[^)]*)\)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:208: SyntaxWarning: invalid escape sequence '\s'
+  "\s*"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:209: SyntaxWarning: invalid escape sequence '\s'
+  "(?:(?:(?P<fmt_trans>\".+),)?\s*(?P<fmt>\".+))?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:210: SyntaxWarning: invalid escape sequence '\s'
+  "\s*")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:312: SyntaxWarning: invalid escape sequence '\d'
+  _FMT = re.compile("(%[\d\.]*\w+|%.*?PRI\S+)")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:452: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(format) is 0:
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:457: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(backends) is 0:
+  GEN     trace/generated-helpers.h
+  GEN     trace/generated-helpers.c
+  GEN     module_block.h
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:78: SyntaxWarning: invalid escape sequence '\*'
+  bit = re.sub("\*", "", bit)
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:205: SyntaxWarning: invalid escape sequence '\w'
+  _CRE = re.compile("((?P<props>[\w\s]+)\s+)?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:206: SyntaxWarning: invalid escape sequence '\w'
+  "(?P<name>\w+)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:207: SyntaxWarning: invalid escape sequence '\('
+  "\((?P<args>[^)]*)\)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:208: SyntaxWarning: invalid escape sequence '\s'
+  "\s*"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:209: SyntaxWarning: invalid escape sequence '\s'
+  "(?:(?:(?P<fmt_trans>\".+),)?\s*(?P<fmt>\".+))?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:210: SyntaxWarning: invalid escape sequence '\s'
+  "\s*")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:312: SyntaxWarning: invalid escape sequence '\d'
+  _FMT = re.compile("(%[\d\.]*\w+|%.*?PRI\S+)")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:452: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(format) is 0:
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:457: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(backends) is 0:
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:78: SyntaxWarning: invalid escape sequence '\*'
+  bit = re.sub("\*", "", bit)
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:205: SyntaxWarning: invalid escape sequence '\w'
+  _CRE = re.compile("((?P<props>[\w\s]+)\s+)?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:206: SyntaxWarning: invalid escape sequence '\w'
+  "(?P<name>\w+)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:207: SyntaxWarning: invalid escape sequence '\('
+  "\((?P<args>[^)]*)\)"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:208: SyntaxWarning: invalid escape sequence '\s'
+  "\s*"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:209: SyntaxWarning: invalid escape sequence '\s'
+  "(?:(?:(?P<fmt_trans>\".+),)?\s*(?P<fmt>\".+))?"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:210: SyntaxWarning: invalid escape sequence '\s'
+  "\s*")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:312: SyntaxWarning: invalid escape sequence '\d'
+  _FMT = re.compile("(%[\d\.]*\w+|%.*?PRI\S+)")
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:452: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(format) is 0:
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:457: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(backends) is 0:
+  CC      qom/cpu.o
+  CC      replay/replay-time.o
+  CC      replay/replay-input.o
+  CC      replay/replay-char.o
+In file included from qom/cpu.c:25:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_state':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:25:9: warning: implicit declaration of function 'hax_cpu_synchronize_state'; did you mean 'whpx_cpu_synchronize_state'? [-Wimplicit-function-declaration]
+   25 |         hax_cpu_synchronize_state(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_state
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:25:9: warning: nested extern declaration of 'hax_cpu_synchronize_state' [-Wnested-externs]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_post_reset':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:38:9: warning: implicit declaration of function 'hax_cpu_synchronize_post_reset'; did you mean 'whpx_cpu_synchronize_post_reset'? [-Wimplicit-function-declaration]
+   38 |         hax_cpu_synchronize_post_reset(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_post_reset
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:38:9: warning: nested extern declaration of 'hax_cpu_synchronize_post_reset' [-Wnested-externs]
+replay/replay-time.c:32:6: warning: conflicting types for 'replay_read_next_clock' due to enum/integer mismatch; have 'void(ReplayClockKind)' [-Wenum-int-mismatch]
+   32 | void replay_read_next_clock(ReplayClockKind kind)
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from replay/replay-time.c:15:
+replay/replay-internal.h:135:6: note: previous declaration of 'replay_read_next_clock' with type 'void(unsigned int)'
+  135 | void replay_read_next_clock(unsigned int kind);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_post_init':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:51:9: warning: implicit declaration of function 'hax_cpu_synchronize_post_init'; did you mean 'whpx_cpu_synchronize_post_init'? [-Wimplicit-function-declaration]
+   51 |         hax_cpu_synchronize_post_init(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_post_init
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:51:9: warning: nested extern declaration of 'hax_cpu_synchronize_post_init' [-Wnested-externs]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h: In function 'cpu_synchronize_pre_loadvm':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:64:9: warning: implicit declaration of function 'hax_cpu_synchronize_pre_loadvm'; did you mean 'whpx_cpu_synchronize_pre_loadvm'? [-Wimplicit-function-declaration]
+   64 |         hax_cpu_synchronize_pre_loadvm(cpu);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         whpx_cpu_synchronize_pre_loadvm
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/sysemu/hw_accel.h:64:9: warning: nested extern declaration of 'hax_cpu_synchronize_pre_loadvm' [-Wnested-externs]
+  CC      replay/replay-snapshot.o
+  CC      replay/replay-net.o
+  CC      replay/replay-audio.o
+  CC      slirp/cksum.o
+  CC      slirp/if.o
+  CC      slirp/ip_icmp.o
+  CC      slirp/ip6_icmp.o
+  CC      slirp/ip6_input.o
+slirp/ip6_icmp.c: In function 'icmp6_send_error':
+slirp/ip6_icmp.c:79:31: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   79 |     if (IN6_IS_ADDR_MULTICAST(&ip->ip_src) ||
+      |                               ^~~~~~~~~~~
+In file included from slirp/slirp.h:80,
+                 from slirp/ip6_icmp.c:7:
+slirp/ip6_icmp.c:80:22: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   80 |             in6_zero(&ip->ip_src)) {
+      |                      ^~~~~~~~~~~
+slirp/ip6.h:94:16: note: in definition of macro 'in6_zero'
+   94 |     (in6_equal(a, &(struct in6_addr)ZERO_ADDR))
+      |                ^
+slirp/ip6_icmp.c: In function 'ndp_send_na':
+slirp/ip6_icmp.c:275:18: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  275 |     if (in6_zero(&ip->ip_src)) {
+      |                  ^~~~~~~~~~~
+slirp/ip6.h:94:16: note: in definition of macro 'in6_zero'
+   94 |     (in6_equal(a, &(struct in6_addr)ZERO_ADDR))
+      |                ^
+slirp/ip6_icmp.c:294:49: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  294 |     ricmp->icmp6_nna.S = !IN6_IS_ADDR_MULTICAST(&rip->ip_dst);
+      |                                                 ^~~~~~~~~~~~
+slirp/ip6_icmp.c: In function 'ndp_input':
+slirp/ip6_icmp.c:351:43: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  351 |                 && !IN6_IS_ADDR_MULTICAST(&icmp->icmp6_nns.target)
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6_icmp.c:353:31: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  353 |                 && (!in6_zero(&ip->ip_src)
+      |                               ^~~~~~~~~~~
+slirp/ip6.h:94:16: note: in definition of macro 'in6_zero'
+   94 |     (in6_equal(a, &(struct in6_addr)ZERO_ADDR))
+      |                ^
+slirp/ip6_icmp.c:354:52: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  354 |                     || in6_solicitednode_multicast(&ip->ip_dst))) {
+      |                                                    ^~~~~~~~~~~
+slirp/ip6.h:91:20: note: in definition of macro 'in6_solicitednode_multicast'
+   91 |     (in6_equal_net(a, &(struct in6_addr)SOLICITED_NODE_PREFIX, 104))
+      |                    ^
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:76:21: note: in definition of macro 'in6_equal_router'
+   76 |     ((in6_equal_net(a, &slirp->vprefix_addr6, slirp->vprefix_len)\
+      |                     ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:77:25: note: in definition of macro 'in6_equal_router'
+   77 |       && in6_equal_mach(a, &slirp->vhost_addr6, slirp->vprefix_len))\
+      |                         ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:78:21: note: in definition of macro 'in6_equal_router'
+   78 |   || (in6_equal_net(a, &(struct in6_addr)LINKLOCAL_ADDR, 64)\
+      |                     ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:79:25: note: in definition of macro 'in6_equal_router'
+   79 |       && in6_equal_mach(a, &slirp->vhost_addr6, 64)))
+      |                         ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:82:21: note: in definition of macro 'in6_equal_dns'
+   82 |     ((in6_equal_net(a, &slirp->vprefix_addr6, slirp->vprefix_len)\
+      |                     ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:83:25: note: in definition of macro 'in6_equal_dns'
+   83 |       && in6_equal_mach(a, &slirp->vnameserver_addr6, slirp->vprefix_len))\
+      |                         ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:84:21: note: in definition of macro 'in6_equal_dns'
+   84 |   || (in6_equal_net(a, &(struct in6_addr)LINKLOCAL_ADDR, 64)\
+      |                     ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:355:32: warning: taking address of packed member of 'struct ndp_ns' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6.h:85:25: note: in definition of macro 'in6_equal_dns'
+   85 |       && in6_equal_mach(a, &slirp->vnameserver_addr6, 64)))
+      |                         ^
+slirp/ip6_icmp.c:355:17: note: in expansion of macro 'in6_equal_host'
+  355 |             if (in6_equal_host(&icmp->icmp6_nns.target)) {
+      |                 ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:368:43: warning: taking address of packed member of 'struct ndp_na' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  368 |                 && !IN6_IS_ADDR_MULTICAST(&icmp->icmp6_nna.target)
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~
+slirp/ip6_icmp.c:369:44: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  369 |                 && (!IN6_IS_ADDR_MULTICAST(&ip->ip_dst)
+      |                                            ^~~~~~~~~~~
+slirp/ip6_icmp.c: In function 'icmp6_input':
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:76:21: note: in definition of macro 'in6_equal_router'
+   76 |     ((in6_equal_net(a, &slirp->vprefix_addr6, slirp->vprefix_len)\
+      |                     ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:77:25: note: in definition of macro 'in6_equal_router'
+   77 |       && in6_equal_mach(a, &slirp->vhost_addr6, slirp->vprefix_len))\
+      |                         ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:78:21: note: in definition of macro 'in6_equal_router'
+   78 |   || (in6_equal_net(a, &(struct in6_addr)LINKLOCAL_ADDR, 64)\
+      |                     ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:79:25: note: in definition of macro 'in6_equal_router'
+   79 |       && in6_equal_mach(a, &slirp->vhost_addr6, 64)))
+      |                         ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:82:21: note: in definition of macro 'in6_equal_dns'
+   82 |     ((in6_equal_net(a, &slirp->vprefix_addr6, slirp->vprefix_len)\
+      |                     ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:83:25: note: in definition of macro 'in6_equal_dns'
+   83 |       && in6_equal_mach(a, &slirp->vnameserver_addr6, slirp->vprefix_len))\
+      |                         ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:84:21: note: in definition of macro 'in6_equal_dns'
+   84 |   || (in6_equal_net(a, &(struct in6_addr)LINKLOCAL_ADDR, 64)\
+      |                     ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+slirp/ip6_icmp.c:414:28: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |                            ^~~~~~~~~~~
+slirp/ip6.h:85:25: note: in definition of macro 'in6_equal_dns'
+   85 |       && in6_equal_mach(a, &slirp->vnameserver_addr6, 64)))
+      |                         ^
+slirp/ip6_icmp.c:414:13: note: in expansion of macro 'in6_equal_host'
+  414 |         if (in6_equal_host(&ip->ip_dst)) {
+      |             ^~~~~~~~~~~~~~
+  CC      slirp/ip6_output.o
+  CC      slirp/ip_input.o
+  CC      slirp/ip_output.o
+  CC      slirp/dnssearch.o
+  CC      slirp/dhcpv6.o
+  CC      slirp/slirp.o
+  CC      slirp/mbuf.o
+  CC      slirp/misc.o
+  CC      slirp/sbuf.o
+  CC      slirp/socket.o
+  CC      slirp/tcp_input.o
+  CC      slirp/tcp_output.o
+  CC      slirp/tcp_subr.o
+  CC      slirp/tcp_timer.o
+  CC      slirp/udp.o
+  CC      slirp/udp6.o
+  CC      slirp/bootp.o
+  CC      slirp/tftp.o
+  CC      slirp/arp_table.o
+slirp/udp6.c: In function 'udp6_input':
+slirp/udp6.c:67:20: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   67 |         (in6_equal(&ip->ip_dst, &slirp->vhost_addr6) ||
+      |                    ^~~~~~~~~~~
+In file included from slirp/udp6.c:10:
+slirp/udp6.c:68:29: warning: taking address of packed member of 'struct ip6' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   68 |          in6_dhcp_multicast(&ip->ip_dst))) {
+      |                             ^~~~~~~~~~~
+slirp/dhcpv6.h:21:15: note: in definition of macro 'in6_dhcp_multicast'
+   21 |     in6_equal(a, &(struct in6_addr)ALLDHCP_MULTICAST)
+      |               ^
+  CC      slirp/ndp_table.o
+  CC      slirp/ncsi.o
+  CC      ui/orbital.o
+  CXX     ui/orbital-logs.o
+slirp/ndp_table.c: In function 'ndp_table_add':
+slirp/ndp_table.c:34:23: warning: taking address of packed member of 'struct ndpentry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   34 |         if (in6_equal(&ndp_table->table[i].ip_addr, &ip_addr)) {
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+slirp/ndp_table.c: In function 'ndp_table_search':
+slirp/ndp_table.c:79:23: warning: taking address of packed member of 'struct ndpentry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+   79 |         if (in6_equal(&ndp_table->table[i].ip_addr, &ip_addr)) {
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/orbital-stats.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/orbital-debug-gpu.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+In file included from ui/orbital.c:49:
+ui/orbital-style.h:33:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   33 | void orbital_style_initialize();
+      | ^~~~
+ui/orbital.c:175:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  175 | void orbital_update_cpu_procs_list_done()
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ui/orbital.c: In function 'orbital_update_cpu_procs_list_done':
+ui/orbital.c:175:6: warning: old-style function definition [-Wold-style-definition]
+ui/orbital.c:177:5: warning: implicit declaration of function 'orbital_procs_list_done'; did you mean 'orbital_procs_list_draw'? [-Wimplicit-function-declaration]
+  177 |     orbital_procs_list_done(ui.procs_list);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     orbital_procs_list_draw
+ui/orbital.c:177:5: warning: nested extern declaration of 'orbital_procs_list_done' [-Wnested-externs]
+  CXX     ui/orbital-procs.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/orbital-procs-list.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CXX     ui/orbital-style.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+ui/orbital-stats.cpp: In member function 'void orbital_stats_t::column_widths_t::Calculate()':
+ui/orbital-stats.cpp:98:18: error: 'string' is not a member of 'std'
+   98 |             std::string max_name_column;
+      |                  ^~~~~~
+ui/orbital-stats.cpp:43:1: note: 'std::string' is defined in header '<string>'; this is probably fixable by adding '#include <string>'
+   42 | #include <unordered_map>
+  +++ |+#include <string>
+   43 | 
+ui/orbital-stats.cpp:104:21: error: 'max_name_column' was not declared in this scope; did you mean 'max_name_column_width'?
+  104 |                     max_name_column = dev.name;
+      |                     ^~~~~~~~~~~~~~~
+      |                     max_name_column_width
+ui/orbital-stats.cpp:114:79: error: 'max_name_column' was not declared in this scope; did you mean 'max_name_column_width'?
+  114 |             name = frame_padding_x * 2 + item_spacing_x + ImGui::CalcTextSize(max_name_column.c_str()).x;
+      |                                                                               ^~~~~~~~~~~~~~~
+      |                                                                               max_name_column_width
+  CC      ui/keymaps.o
+make: *** [/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/rules.mak:91: ui/orbital-stats.o] Error 1
+make: *** Waiting for unfinished jobs....
+ui/orbital-procs.cpp: In member function 'void orbital_procs_t::Draw(const char*, bool*)':
+ui/orbital-procs.cpp:76:28: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'unsigned int'} [-Wsign-compare]
+   76 |         for (auto i = 0; i < cpu_count; ++i) {
+      |                          ~~^~~~~~~~~~~
+ui/orbital-procs-list.cpp: In member function 'void orbital_procs_list_t::Draw(const char*, bool*)':
+ui/orbital-procs-list.cpp:250:25: warning: loop variable 'data' creates a copy from type 'const orbital_proc_data' [-Wrange-loop-construct]
+  250 |         for (const auto data : proc_data_list) {
+      |                         ^~~~
+ui/orbital-procs-list.cpp:250:25: note: use reference type to prevent copying
+  250 |         for (const auto data : proc_data_list) {
+      |                         ^~~~
+      |                         &

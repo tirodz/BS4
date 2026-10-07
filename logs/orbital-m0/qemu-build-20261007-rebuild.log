@@ -1,0 +1,644 @@
+  CC      ps4-softmmu/hw/ps4/aeolia_xhci.o
+  CC      ps4-softmmu/hw/ps4/liverpool_iommu.o
+  CC      ps4-softmmu/hw/ps4/liverpool_rootc.o
+  CC      ps4-softmmu/hw/ps4/liverpool_rootp.o
+  CC      ps4-softmmu/hw/ps4/ps4.o
+  CC      ps4-softmmu/hw/ps4/aeolia/aeolia_hpet.o
+  CC      ps4-softmmu/hw/ps4/aeolia/aeolia_msi.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_dce.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_dce_d.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_gart.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_gfx.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_gfx_d.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_gfx_framebuffer.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_gfx_pipeline.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_gfx_shader.o
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_ih.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: In function 'xhci_kick_epctx':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:2005:21: warning: variable 'type' set but not used [-Wunused-but-set-variable=]
+ 2005 |             TRBType type;
+      |                     ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: At top level:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:493:20: warning: 'ep_state_name' defined but not used [-Wunused-function]
+  493 | static const char *ep_state_name(uint32_t state)
+      |                    ^~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:487:20: warning: 'event_name' defined but not used [-Wunused-function]
+  487 | static const char *event_name(XHCIEvent *event)
+      |                    ^~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:481:20: warning: 'trb_name' defined but not used [-Wunused-function]
+  481 | static const char *trb_name(XHCITRB *trb)
+      |                    ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_iommu.c: In function 'liverpool_iommu_inval_devtab_entry':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool_iommu.c:472:14: warning: unused variable 'devid' [-Wunused-variable]
+  472 |     uint16_t devid = cpu_to_le16((uint16_t)extract64(cmd[0], 0, 16));
+      |              ^~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c: In function 'usb_xhci_init':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3327:66: warning: '%d' directive output may be truncated writing between 1 and 10 bytes into a region of size 5 [-Wformat-truncation=]
+ 3327 |             snprintf(port->name, sizeof(port->name), "usb2 port #%d", i+1);
+      |                                                                  ^~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3327:54: note: directive argument in the range [1, 2147483647]
+ 3327 |             snprintf(port->name, sizeof(port->name), "usb2 port #%d", i+1);
+      |                                                      ^~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3327:13: note: 'snprintf' output between 13 and 22 bytes into a destination of size 16
+ 3327 |             snprintf(port->name, sizeof(port->name), "usb2 port #%d", i+1);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3340:66: warning: '%d' directive output may be truncated writing between 1 and 10 bytes into a region of size 5 [-Wformat-truncation=]
+ 3340 |             snprintf(port->name, sizeof(port->name), "usb3 port #%d", i+1);
+      |                                                                  ^~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3340:54: note: directive argument in the range [1, 2147483647]
+ 3340 |             snprintf(port->name, sizeof(port->name), "usb3 port #%d", i+1);
+      |                                                      ^~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/aeolia_xhci.c:3340:13: note: 'snprintf' output between 13 and 22 bytes into a destination of size 16
+ 3340 |             snprintf(port->name, sizeof(port->name), "usb3 port #%d", i+1);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_samu.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c: In function 'cp_handle_pm4_it_wait_reg_mem':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c:377:14: warning: variable 'poll_interval' set but not used [-Wunused-but-set-variable=]
+  377 |     uint32_t poll_interval, reference, mask;
+      |              ^~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c: In function 'cp_handle_pm4_type0':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c:453:14: warning: variable 'reg' set but not used [-Wunused-but-set-variable=]
+  453 |     uint32_t reg, count;
+      |              ^~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c: In function 'cp_handle_pm4_type3':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c:476:20: warning: variable 'shtype' set but not used [-Wunused-but-set-variable=]
+  476 |     uint32_t pred, shtype, itop, count;
+      |                    ^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_gfx.c:476:14: warning: variable 'pred' set but not used [-Wunused-but-set-variable=]
+  476 |     uint32_t pred, shtype, itop, count;
+      |              ^~~~
+  CC      ps4-softmmu/hw/ps4/liverpool/lvp_samu_d.o
+  CXX     ps4-softmmu/hw/ps4/liverpool/gca/gcn_translator.o
+  CC      ps4-softmmu/hw/ps4/liverpool/sam/modules/sbl_authmgr.o
+  CC      ps4-softmmu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.o
+  CC      ps4-softmmu/hw/scsi/virtio-scsi.o
+  CC      ps4-softmmu/hw/scsi/virtio-scsi-dataplane.o
+  CC      ps4-softmmu/hw/timer/mc146818rtc.o
+  CC      ps4-softmmu/hw/virtio/virtio.o
+  CC      ps4-softmmu/hw/virtio/virtio-balloon.o
+  CC      ps4-softmmu/hw/virtio/virtio-crypto.o
+  CC      ps4-softmmu/hw/virtio/virtio-crypto-pci.o
+  CC      ps4-softmmu/hw/i386/multiboot.o
+  CC      ps4-softmmu/hw/i386/pc.o
+  CC      ps4-softmmu/hw/i386/pc_piix.o
+  CC      ps4-softmmu/hw/i386/pc_q35.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c: In function 'trace_hexdump':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:59:9: warning: format not a string literal and no format arguments [-Wformat-security]
+   59 |         TRACE_HEXDUMP_PREFIX;
+      |         ^~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:59:9: warning: format not a string literal and no format arguments [-Wformat-security]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:67:9: warning: format not a string literal and no format arguments [-Wformat-security]
+   67 |         TRACE_HEXDUMP_PREFIX;
+      |         ^~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:67:9: warning: format not a string literal and no format arguments [-Wformat-security]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c: In function 'trace_samu_packet_ccp_aes':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:41:34: warning: passing argument 2 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 | #define TRACE_PREFIX_SUBCOMMAND  "      "
+      |                                  ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:244:34: note: in expansion of macro 'TRACE_PREFIX_SUBCOMMAND'
+  244 |         trace_hexdump("key:   ", TRACE_PREFIX_SUBCOMMAND, command->aes.key, 0x20);
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:51: note: expected 'char *' but argument is of type 'const char *'
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                             ~~~~~~^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:244:71: warning: passing argument 3 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  244 |         trace_hexdump("key:   ", TRACE_PREFIX_SUBCOMMAND, command->aes.key, 0x20);
+      |                                                           ~~~~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                                           ~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:41:34: warning: passing argument 2 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 | #define TRACE_PREFIX_SUBCOMMAND  "      "
+      |                                  ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:246:30: note: in expansion of macro 'TRACE_PREFIX_SUBCOMMAND'
+  246 |     trace_hexdump("iv:    ", TRACE_PREFIX_SUBCOMMAND, command->aes.iv, 0x10);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:51: note: expected 'char *' but argument is of type 'const char *'
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                             ~~~~~~^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:246:67: warning: passing argument 3 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  246 |     trace_hexdump("iv:    ", TRACE_PREFIX_SUBCOMMAND, command->aes.iv, 0x10);
+      |                                                       ~~~~~~~~~~~~^~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                                           ~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c: In function 'trace_samu_packet_ccp_xts':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:41:34: warning: passing argument 2 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 | #define TRACE_PREFIX_SUBCOMMAND  "      "
+      |                                  ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:262:27: note: in expansion of macro 'TRACE_PREFIX_SUBCOMMAND'
+  262 |     trace_hexdump("key:", TRACE_PREFIX_SUBCOMMAND,
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:51: note: expected 'char *' but argument is of type 'const char *'
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                             ~~~~~~^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:263:21: warning: passing argument 3 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  263 |         command->xts.key, 0x20);
+      |         ~~~~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                                           ~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c: In function 'trace_samu_packet_ccp_sha':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:41:34: warning: passing argument 2 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 | #define TRACE_PREFIX_SUBCOMMAND  "      "
+      |                                  ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:272:28: note: in expansion of macro 'TRACE_PREFIX_SUBCOMMAND'
+  272 |     trace_hexdump("hash:", TRACE_PREFIX_SUBCOMMAND,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:51: note: expected 'char *' but argument is of type 'const char *'
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                             ~~~~~~^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:273:21: warning: passing argument 3 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  273 |         command->sha.hash, 0x20);
+      |         ~~~~~~~~~~~~^~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                                           ~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c: In function 'trace_samu_packet_ccp_hmac':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:41:34: warning: passing argument 2 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 | #define TRACE_PREFIX_SUBCOMMAND  "      "
+      |                                  ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:315:28: note: in expansion of macro 'TRACE_PREFIX_SUBCOMMAND'
+  315 |     trace_hexdump("hash:", TRACE_PREFIX_SUBCOMMAND,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:51: note: expected 'char *' but argument is of type 'const char *'
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                             ~~~~~~^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:316:22: warning: passing argument 3 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  316 |         command->hmac.hash, 0x20);
+      |         ~~~~~~~~~~~~~^~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                                           ~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:41:34: warning: passing argument 2 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 | #define TRACE_PREFIX_SUBCOMMAND  "      "
+      |                                  ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:317:28: note: in expansion of macro 'TRACE_PREFIX_SUBCOMMAND'
+  317 |     trace_hexdump("key: ", TRACE_PREFIX_SUBCOMMAND,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:51: note: expected 'char *' but argument is of type 'const char *'
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                             ~~~~~~^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:318:22: warning: passing argument 3 of 'trace_hexdump' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  318 |         command->hmac.key, command->hmac.key_size);
+      |         ~~~~~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:54:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   54 | static void trace_hexdump(const char* name, char* prefix, uint8_t* data, size_t size)
+      |                                                           ~~~~~~~~~^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c: In function 'trace_samu_packet_mailbox':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:40:34: warning: format '%llX' expects argument of type 'long long unsigned int', but argument 2 has type 'uint32_t' {aka 'unsigned int'} [-Wformat=]
+   40 | #define TRACE_PREFIX_COMMAND     "    "
+      |                                  ^~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:45:39: note: in expansion of macro 'TRACE_PREFIX_COMMAND'
+   45 | #define TRACE_COMMAND(...)     printf(TRACE_PREFIX_COMMAND __VA_ARGS__)
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu_d.c:403:5: note: in expansion of macro 'TRACE_COMMAND'
+  403 |     TRACE_COMMAND("function_id: %llX\n", command->function_id);
+      |     ^~~~~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:45:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.h:91:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   91 | void sbl_pupmgr_spawn();
+      | ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.h:92:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   92 | bool sbl_pupmgr_spawned();
+      | ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c: In function 'liverpool_gc_samu_fakedecrypt':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:78:9: warning: pointer targets in passing argument 2 of 'qcrypto_hash_bytes' differ in signedness [-Wpointer-sign]
+   78 |         in_buffer, in_length, &hash, &hashlen, NULL);
+      |         ^~~~~~~~~
+      |         |
+      |         const uint8_t * {aka const unsigned char *}
+In file included from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:23:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/crypto/hash.h:94:36: note: expected 'const char *' but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   94 |                        const char *buf,
+      |                        ~~~~~~~~~~~~^~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:95:22: warning: pointer targets in passing argument 1 of 'qemu_hexdump' differ in signedness [-Wpointer-sign]
+   95 |         qemu_hexdump(in_buffer, stdout, "", in_length > 0x80 ? 0x80 : in_length);
+      |                      ^~~~~~~~~
+      |                      |
+      |                      const uint8_t * {aka const unsigned char *}
+In file included from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/crypto/random.h:24,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:24:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu-common.h:148:31: note: expected 'const char *' but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+  148 | void qemu_hexdump(const char *buf, FILE *fp, const char *prefix, size_t size);
+      |                   ~~~~~~~~~~~~^~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c: In function 'samu_packet_ccp_aes':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:191:18: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  191 |         key_data = query_ccp->aes.key;
+      |                  ^
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:170:43: warning: unused variable 'iv_size' [-Wunused-variable]
+  170 |     hwaddr   in_size, out_size, key_size, iv_size;
+      |                                           ^~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:170:33: warning: unused variable 'key_size' [-Wunused-variable]
+  170 |     hwaddr   in_size, out_size, key_size, iv_size;
+      |                                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:169:43: warning: unused variable 'iv_data' [-Wunused-variable]
+  169 |     void    *in_data,*out_data,*key_data,*iv_data;
+      |                                           ^~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:169:33: warning: variable 'key_data' set but not used [-Wunused-but-set-variable=]
+  169 |     void    *in_data,*out_data,*key_data,*iv_data;
+      |                                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:168:43: warning: unused variable 'iv_slot' [-Wunused-variable]
+  168 |     uint32_t in_slot, out_slot, key_slot, iv_slot;
+      |                                           ^~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:168:14: warning: unused variable 'in_slot' [-Wunused-variable]
+  168 |     uint32_t in_slot, out_slot, key_slot, iv_slot;
+      |              ^~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c: In function 'samu_packet_ccp_xts':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:237:18: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  237 |         key_data = query_ccp->xts.key;
+      |                  ^
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:216:33: warning: unused variable 'key_size' [-Wunused-variable]
+  216 |     hwaddr   in_size, out_size, key_size;
+      |                                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:215:33: warning: variable 'key_data' set but not used [-Wunused-but-set-variable=]
+  215 |     void    *in_data,*out_data,*key_data;
+      |                                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:214:14: warning: unused variable 'in_slot' [-Wunused-variable]
+  214 |     uint32_t in_slot, out_slot, key_slot;
+      |              ^~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c: In function 'samu_packet_rand':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:478:47: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  478 |     samu_command_service_rand_t *reply_rand = &query->data.service_rand; // TODO: Why is the same address reused?
+      |                                               ^
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/lvp_samu.c:477:34: warning: unused variable 'query_rand' [-Wunused-variable]
+  477 |     samu_command_service_rand_t *query_rand = &query->data.service_rand;
+      |                                  ^~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:22:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.h:91:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   91 | void sbl_pupmgr_spawn();
+      | ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.h:92:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   92 | bool sbl_pupmgr_spawned();
+      | ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:99:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   99 | void sbl_pupmgr_spawn() {
+      |      ^~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c: In function 'sbl_pupmgr_spawn':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:99:6: warning: old-style function definition [-Wold-style-definition]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c: At top level:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:103:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  103 | bool sbl_pupmgr_spawned() {
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c: In function 'sbl_pupmgr_spawned':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:103:6: warning: old-style function definition [-Wold-style-definition]
+  CC      ps4-softmmu/hw/i386/pc_sysfw.o
+  CC      ps4-softmmu/hw/i386/x86-iommu.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/scsi/virtio-scsi.c: In function 'virtio_scsi_do_tmf':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/scsi/virtio-scsi.c:265:39: warning: taking address of packed member of 'struct virtio_scsi_ctrl_tmf_req' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  265 |     virtio_tswap32s(VIRTIO_DEVICE(s), &req->req.tmf.subtype);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+  CC      ps4-softmmu/hw/i386/intel_iommu.o
+  CC      ps4-softmmu/hw/i386/amd_iommu.o
+  CC      ps4-softmmu/hw/i386/vmport.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/multiboot.c: In function 'load_multiboot':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/multiboot.c:381:5: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+  381 |     mb_bootinfo_data = g_memdup(bootinfo, sizeof(bootinfo));
+      |     ^~~~~~~~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/multiboot.c:25:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      ps4-softmmu/hw/i386/vmmouse.o
+  CC      ps4-softmmu/hw/i386/kvmvapic.o
+  CC      ps4-softmmu/hw/i386/acpi-build.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:1106:13: warning: 'isapc_machine_options' defined but not used [-Wunused-function]
+ 1106 | static void isapc_machine_options(MachineClass *m)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v0_10' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:986:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  986 | DEFINE_I440FX_MACHINE(v0_10, "pc-0.10", pc_compat_0_13,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:979:13: warning: 'pc_i440fx_0_10_machine_options' defined but not used [-Wunused-function]
+  979 | static void pc_i440fx_0_10_machine_options(MachineClass *m)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v0_11' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:951:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  951 | DEFINE_I440FX_MACHINE(v0_11, "pc-0.11", pc_compat_0_13,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v0_12' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:920:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  920 | DEFINE_I440FX_MACHINE(v0_12, "pc-0.12", pc_compat_0_13,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v0_13' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:885:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  885 | DEFINE_I440FX_MACHINE(v0_13, "pc-0.13", pc_compat_0_13,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v0_14' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:848:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  848 | DEFINE_I440FX_MACHINE(v0_14, "pc-0.14", pc_compat_1_2,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v0_15' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:809:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  809 | DEFINE_I440FX_MACHINE(v0_15, "pc-0.15", pc_compat_1_2,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_0' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:795:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  795 | DEFINE_I440FX_MACHINE(v1_0, "pc-1.0", pc_compat_1_2,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_1' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:764:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  764 | DEFINE_I440FX_MACHINE(v1_1, "pc-1.1", pc_compat_1_2,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_2' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:721:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  721 | DEFINE_I440FX_MACHINE(v1_2, "pc-1.2", pc_compat_1_2,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_3' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:682:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  682 | DEFINE_I440FX_MACHINE(v1_3, "pc-1.3", pc_compat_1_3,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_4' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:650:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  650 | DEFINE_I440FX_MACHINE(v1_4, "pc-i440fx-1.4", pc_compat_1_4,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_5' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:638:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  638 | DEFINE_I440FX_MACHINE(v1_5, "pc-i440fx-1.5", pc_compat_1_5,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_6' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:627:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  627 | DEFINE_I440FX_MACHINE(v1_6, "pc-i440fx-1.6", pc_compat_1_6,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v1_7' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:613:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  613 | DEFINE_I440FX_MACHINE(v1_7, "pc-i440fx-1.7", pc_compat_1_7,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_0' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:596:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  596 | DEFINE_I440FX_MACHINE(v2_0, "pc-i440fx-2.0", pc_compat_2_0,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_1' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:563:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  563 | DEFINE_I440FX_MACHINE(v2_1, "pc-i440fx-2.1", pc_compat_2_1,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_2' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:548:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  548 | DEFINE_I440FX_MACHINE(v2_2, "pc-i440fx-2.2", pc_compat_2_2,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_3' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:535:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  535 | DEFINE_I440FX_MACHINE(v2_3, "pc-i440fx-2.3", pc_compat_2_3,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_4' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:524:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  524 | DEFINE_I440FX_MACHINE(v2_4, "pc-i440fx-2.4", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_5' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:511:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  511 | DEFINE_I440FX_MACHINE(v2_5, "pc-i440fx-2.5", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_6' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:498:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  498 | DEFINE_I440FX_MACHINE(v2_6, "pc-i440fx-2.6", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_7' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:485:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  485 | DEFINE_I440FX_MACHINE(v2_7, "pc-i440fx-2.7", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_8' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:475:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  475 | DEFINE_I440FX_MACHINE(v2_8, "pc-i440fx-2.8", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_9' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:466:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  466 | DEFINE_I440FX_MACHINE(v2_9, "pc-i440fx-2.9", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_10' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:456:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  456 | DEFINE_I440FX_MACHINE(v2_10, "pc-i440fx-2.10", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_11' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:446:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  446 | DEFINE_I440FX_MACHINE(v2_11, "pc-i440fx-2.11", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:406:17: warning: 'pc_init_v2_12' defined but not used [-Wunused-function]
+  406 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:435:1: note: in expansion of macro 'DEFINE_I440FX_MACHINE'
+  435 | DEFINE_I440FX_MACHINE(v2_12, "pc-i440fx-2.12", NULL,
+      | ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_piix.c:375:13: warning: 'pc_init_isa' defined but not used [-Wunused-function]
+  375 | static void pc_init_isa(MachineState *machine)
+      |             ^~~~~~~~~~~
+  CC      ps4-softmmu/target/i386/helper.o
+  CC      ps4-softmmu/target/i386/cpu.o
+  CC      ps4-softmmu/target/i386/gdbstub.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_4' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:405:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  405 | DEFINE_Q35_MACHINE(v2_4, "pc-q35-2.4", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:396:13: warning: 'pc_q35_2_4_machine_options' defined but not used [-Wunused-function]
+  396 | static void pc_q35_2_4_machine_options(MachineClass *m)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_5' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:393:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  393 | DEFINE_Q35_MACHINE(v2_5, "pc-q35-2.5", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_6' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:381:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  381 | DEFINE_Q35_MACHINE(v2_6, "pc-q35-2.6", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_7' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:369:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  369 | DEFINE_Q35_MACHINE(v2_7, "pc-q35-2.7", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_8' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:359:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  359 | DEFINE_Q35_MACHINE(v2_8, "pc-q35-2.8", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_9' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:350:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  350 | DEFINE_Q35_MACHINE(v2_9, "pc-q35-2.9", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_10' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:341:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  341 | DEFINE_Q35_MACHINE(v2_10, "pc-q35-2.10", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_11' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:330:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  330 | DEFINE_Q35_MACHINE(v2_11, "pc-q35-2.11", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:284:17: warning: 'pc_init_v2_12' defined but not used [-Wunused-function]
+  284 |     static void pc_init_##suffix(MachineState *machine) \
+      |                 ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/pc_q35.c:317:1: note: in expansion of macro 'DEFINE_Q35_MACHINE'
+  317 | DEFINE_Q35_MACHINE(v2_12, "pc-q35-2.12", NULL,
+      | ^~~~~~~~~~~~~~~~~~
+  CC      ps4-softmmu/target/i386/xsave_helper.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/gca/gcn_translator.cpp: In function 'void gcn_translator_init(gcn_translator_t*, gcn_analyzer_t*, gcn_stage_t)':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/gca/gcn_translator.cpp:223:21: warning: variable 'res' set but not used [-Wunused-but-set-variable=]
+  223 |     gcn_resource_t *res;
+      |                     ^~~
+  CC      ps4-softmmu/target/i386/translate.o
+  CC      ps4-softmmu/target/i386/bpt_helper.o
+  CC      ps4-softmmu/target/i386/cc_helper.o
+  CC      ps4-softmmu/target/i386/excp_helper.o
+  CC      ps4-softmmu/target/i386/fpu_helper.o
+  CC      ps4-softmmu/target/i386/int_helper.o
+  CC      ps4-softmmu/target/i386/mem_helper.o
+  CC      ps4-softmmu/target/i386/misc_helper.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/acpi-build.c: In function 'acpi_setup':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/acpi-build.c:2923:9: warning: 'g_memdup' is deprecated: Use 'g_memdup2' instead [-Wdeprecated-declarations]
+ 2923 |         build_state->rsdp = g_memdup(tables.rsdp->data, rsdp_size);
+      |         ^~~~~~~~~~~
+In file included from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstring.h:37,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/giochannel.h:36,
+                 from C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib.h:56,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/glib-compat.h:19,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/include/qemu/osdep.h:107,
+                 from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/i386/acpi-build.c:23:
+C:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:338:23: note: declared here
+  338 | gpointer              g_memdup         (gconstpointer mem,
+      |                       ^~~~~~~~
+  CC      ps4-softmmu/target/i386/mpx_helper.o
+  CC      ps4-softmmu/target/i386/seg_helper.o
+  CC      ps4-softmmu/target/i386/smm_helper.o
+  CC      ps4-softmmu/target/i386/svm_helper.o
+  CC      ps4-softmmu/target/i386/machine.o
+  CC      ps4-softmmu/target/i386/arch_memory_mapping.o
+  CC      ps4-softmmu/target/i386/arch_dump.o
+  CC      ps4-softmmu/target/i386/monitor.o
+  CC      ps4-softmmu/target/i386/kvm-stub.o
+  CC      ps4-softmmu/target/i386/sev-stub.o
+  CC      ps4-softmmu/target/i386/hax-all.o
+  CC      ps4-softmmu/target/i386/hax-mem.o
+  CC      ps4-softmmu/target/i386/hax-windows.o
+  GEN     trace/generated-helpers.c
+  CC      ps4-softmmu/trace/control-target.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c: In function 'hax_update_process_list':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c:713:5: warning: implicit declaration of function 'orbital_update_cpu_procs_list_done'; did you mean 'orbital_update_cpu_procs_list_clear'? [-Wimplicit-function-declaration]
+  713 |     orbital_update_cpu_procs_list_done();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     orbital_update_cpu_procs_list_clear
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c:713:5: warning: nested extern declaration of 'orbital_update_cpu_procs_list_done' [-Wnested-externs]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c: In function 'hax_vcpu_hax_exec':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c:850:41: warning: taking address of packed member of 'struct hax_tunnel' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  850 |             ret = hax_handle_debug(cpu, &ht->debug);
+      |                                         ^~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c: At top level:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c:607:13: warning: 'dump_bin' defined but not used [-Wunused-function]
+  607 | static void dump_bin(const char *filename, const void* data, size_t size)
+      |             ^~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-all.c:599:12: warning: 'makedir' defined but not used [-Wunused-function]
+  599 | static int makedir(const char *path) {
+      |            ^~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:78: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  bit = re.sub("\*", "", bit)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:205: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  _CRE = re.compile("((?P<props>[\w\s]+)\s+)?"
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:206: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  "(?P<name>\w+)"
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:207: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  "\((?P<args>[^)]*)\)"
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:208: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  "\s*"
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:209: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  "(?:(?:(?P<fmt_trans>\".+),)?\s*(?P<fmt>\".+))?"
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:210: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  "\s*")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:312: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  _FMT = re.compile("(%[\d\.]*\w+|%.*?PRI\S+)")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:452: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(format) is 0:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/scripts/tracetool/__init__.py:457: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+  if len(backends) is 0:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c: In function 'hax_vm_devfs_string':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:202:55: warning: '%02d' directive output may be truncated writing between 2 and 11 bytes into a region of size 3 [-Wformat-truncation=]
+  202 |     snprintf(name, sizeof HAX_VM_DEVFS, "\\\\.\\hax_vm%02d", vm_id);
+      |                                                       ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:202:41: note: directive argument in the range [-2147483648, 64]
+  202 |     snprintf(name, sizeof HAX_VM_DEVFS, "\\\\.\\hax_vm%02d", vm_id);
+      |                                         ^~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:202:5: note: 'snprintf' output between 13 and 22 bytes into a destination of size 13
+  202 |     snprintf(name, sizeof HAX_VM_DEVFS, "\\\\.\\hax_vm%02d", vm_id);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c: In function 'hax_vcpu_devfs_string':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:221:57: warning: '%02d' directive output may be truncated writing between 2 and 11 bytes into a region of size 10 [-Wformat-truncation=]
+  221 |     snprintf(name, sizeof HAX_VCPU_DEVFS, "\\\\.\\hax_vm%02d_vcpu%02d",
+      |                                                         ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:221:43: note: directive argument in the range [-2147483648, 64]
+  221 |     snprintf(name, sizeof HAX_VCPU_DEVFS, "\\\\.\\hax_vm%02d_vcpu%02d",
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:221:43: note: directive argument in the range [-2147483648, 64]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/target/i386/hax-windows.c:221:5: note: 'snprintf' output between 20 and 38 bytes into a destination of size 20
+  221 |     snprintf(name, sizeof HAX_VCPU_DEVFS, "\\\\.\\hax_vm%02d_vcpu%02d",
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  222 |              vm_id, vcpu_id);
+      |              ~~~~~~~~~~~~~~~
+  CC      ps4-softmmu/trace/generated-helpers.o
+  LINK    ps4-softmmu/qemu-system-ps4.exe

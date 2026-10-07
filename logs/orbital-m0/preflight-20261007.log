@@ -1,0 +1,16 @@
+Orbital 5.00 firmware preflight
+Target directory: C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00
+VERSION UNKNOWN: missing user provenance declaration C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\firmware-manifest.json
+MISSING: decrypted 5.00 kernel ELF — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\sflash\orbisys-500
+MISSING: raw writable sflash input — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\sflash.bin
+MISSING: 5.00 VBIOS ROM — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\vbios.bin
+MISSING: documented HDD eap partition image — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\hdd\eap.img
+MISSING: documented HDD preinst partition image — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\hdd\preinst.img
+MISSING: documented HDD recovery partition image — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\hdd\recovery.img
+MISSING: 5.00 system partition image — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\hdd\system.img
+MISSING: 5.00 system_ex partition image — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\hdd\system_ex.img
+MISSING: 5.00 recovery USB qcow2 image — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\usb\usb-pup-500rec.qcow2
+MISSING: SAMU crypto blob archive — expected C:\Users\Syf\Desktop\BS4\firmware\orbital-5.00\crypto\blobs.zip
+NOTE: opaque Sony partition, sflash, and VBIOS data can only be checked for existence, readability, and declared provenance here; no proprietary cryptographic validation is guessed.
+NOTE: runtime-loaded decrypted userland ELFs and SAMU blob coverage are firmware-dependent; Orbital does not name a complete static Safe Mode file list.
+PREFLIGHT: BLOCKED — 11 issue(s); no emulator was started.

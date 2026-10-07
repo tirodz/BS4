@@ -1,0 +1,30 @@
+  CXX     ps4-softmmu/hw/ps4/liverpool/gca/gcn_translator.o
+  CC      ps4-softmmu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.o
+  CC      ps4-softmmu/hw/scsi/virtio-scsi-dataplane.o
+cc1plus.exe: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+  CC      ps4-softmmu/hw/timer/mc146818rtc.o
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/gca/gcn_translator.cpp:23:10: fatal error: SPIRV/SpvBuilder.h: No such file or directory
+   23 | #include <SPIRV/SpvBuilder.h>
+      |          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/rules.mak:91: hw/ps4/liverpool/gca/gcn_translator.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+In file included from C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:22:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.h:91:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   91 | void sbl_pupmgr_spawn();
+      | ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.h:92:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   92 | bool sbl_pupmgr_spawned();
+      | ^~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:99:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   99 | void sbl_pupmgr_spawn() {
+      |      ^~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c: In function 'sbl_pupmgr_spawn':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:99:6: warning: old-style function definition [-Wold-style-definition]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c: At top level:
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:103:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  103 | bool sbl_pupmgr_spawned() {
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c: In function 'sbl_pupmgr_spawned':
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c:103:6: warning: old-style function definition [-Wold-style-definition]
+make: *** [Makefile:478: subdir-ps4-softmmu] Error 2

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.PUP binary
+*.qcow2 binary
+*.bin binary
+*.elf binary
+*.self binary
+*.sprx binary

@@ -1,0 +1,180 @@
+diff --git a/configure b/configure
+index df06db80e4..7b9201c752 100755
+--- a/configure
++++ b/configure
+@@ -712,7 +712,7 @@ fi
+ HOST_VARIANT_DIR=""
+ 
+ case $targetos in
+-MINGW32*)
++MINGW32*|MINGW64*)
+   mingw32="yes"
+   hax="yes"
+   audio_possible_drivers="dsound sdl"
+diff --git a/hw/ps4/aeolia/aeolia_hpet.c b/hw/ps4/aeolia/aeolia_hpet.c
+index 0bab9b09bd..a500d974e0 100644
+--- a/hw/ps4/aeolia/aeolia_hpet.c
++++ b/hw/ps4/aeolia/aeolia_hpet.c
+@@ -216,12 +216,13 @@ static void update_irq(struct HPETTimer *timer, int set)
+     }
+ }
+ 
+-static void hpet_pre_save(void *opaque)
++static int hpet_pre_save(void *opaque)
+ {
+     AeoliaHPETState *s = opaque;
+ 
+     /* save current counter value */
+     s->hpet_counter = hpet_get_ticks(s);
++    return 0;
+ }
+ 
+ static int hpet_pre_load(void *opaque)
+diff --git a/hw/ps4/aeolia_xhci.c b/hw/ps4/aeolia_xhci.c
+index 5d0e1ec4f7..a0b2acb0df 100644
+--- a/hw/ps4/aeolia_xhci.c
++++ b/hw/ps4/aeolia_xhci.c
+@@ -28,6 +28,7 @@
+ #include "aeolia_xhci.h"
+ #include "aeolia/aeolia_msi.h"
+ #include "qapi/error.h"
++#include "monitor/qdev.h"
+ 
+ #include "ui/orbital.h"
+ 
+@@ -1734,7 +1735,7 @@ static int xhci_fire_ctl_transfer(XHCIState *xhci, XHCITransfer *xfer)
+         xfer->complete = true;
+         xfer->status = CC_SUCCESS;
+         xhci_xfer_report(xfer);
+-        return;
++        return 0;
+     }
+ 
+     /* do some sanity checks */
+@@ -3722,7 +3723,7 @@ static void aeolia_xhci_realize(PCIDevice *dev, Error **errp)
+     dev->config[PCI_INTERRUPT_PIN] = 0x00;
+     pci_add_capability(dev, PCI_CAP_ID_MSI, 0, PCI_CAP_SIZEOF, errp);
+ 
+-    qdev_set_id(dev, "aeolia_xhci_root");
++    qdev_set_id(DEVICE(dev), "aeolia_xhci_root");
+     PCIBus* bus = pci_device_root_bus(dev);
+     for (i = 0; i < 3; i++) {
+         object_initialize(&s->xhci[i], sizeof(XHCIState), TYPE_AEOLIA_XHCI_NODE);
+diff --git a/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c b/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c
+index 1d492ab40d..ae8c0d41bd 100644
+--- a/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c
++++ b/hw/ps4/liverpool/sam/modules/sbl_pupmgr.c
+@@ -107,7 +107,7 @@ bool sbl_pupmgr_spawned() {
+ uint32_t sbl_pupmgr_decrypt_header(samu_state_t *s,
+     const pupmgr_decrypt_header_t *query, pupmgr_decrypt_header_t *reply)
+ {
+-    pup_header_ex_t* pup_header_ex;
++    uint8_t *pup_header_ex;
+     pup_header_t *pup_header;
+     bls_header_t *bls_header;
+     hwaddr pup_header_mapsize = query->pup_header_size;
+@@ -115,7 +115,7 @@ uint32_t sbl_pupmgr_decrypt_header(samu_state_t *s,
+     pup_header = samu_map(s, query->pup_header_addr, &pup_header_mapsize, true);
+     bls_header = samu_map(s, query->bls_header_addr, &bls_header_mapsize, false);
+ 
+-    pup_header_ex = &pup_header[1];
++    pup_header_ex = (uint8_t *)&pup_header[1];
+     liverpool_gc_samu_fakedecrypt(pup_header_ex,
+         pup_header_ex, pup_header->unk_0C_size - sizeof(pup_header_t));
+ 
+diff --git a/include/sysemu/hax.h b/include/sysemu/hax.h
+index 8190352f41..0a63e93b35 100644
+--- a/include/sysemu/hax.h
++++ b/include/sysemu/hax.h
+@@ -24,6 +24,14 @@
+ 
+ #include "qemu-common.h"
+ 
++/* These accelerator hooks are also referenced by generic CPU/VM code that is
++ * compiled without NEED_CPU_H. */
++int hax_sync_vcpus(void);
++void hax_cpu_synchronize_state(struct CPUState *cpu);
++void hax_cpu_synchronize_post_reset(struct CPUState *cpu);
++void hax_cpu_synchronize_post_init(struct CPUState *cpu);
++void hax_cpu_synchronize_pre_loadvm(struct CPUState *cpu);
++
+ #ifdef NEED_CPU_H
+ #include "cpu.h"
+ 
+@@ -34,16 +42,10 @@ struct hax_sw_breakpoint {
+     QTAILQ_ENTRY(hax_sw_breakpoint) entry;
+ };
+ 
+-int hax_sync_vcpus(void);
+ int hax_init_vcpu(CPUState *cpu);
+ int hax_smp_cpu_exec(CPUState *cpu);
+ int hax_populate_ram(uint64_t va, uint64_t size);
+ 
+-void hax_cpu_synchronize_state(CPUState *cpu);
+-void hax_cpu_synchronize_post_reset(CPUState *cpu);
+-void hax_cpu_synchronize_post_init(CPUState *cpu);
+-void hax_cpu_synchronize_pre_loadvm(CPUState *cpu);
+-
+ int hax_update_guest_debug(CPUState *cpu);
+ int hax_insert_breakpoint(CPUState *cpu, target_ulong addr,
+                           target_ulong len, int type);
+diff --git a/ui/orbital-stats.cpp b/ui/orbital-stats.cpp
+index 0e408d9c13..812ba5cf3e 100644
+--- a/ui/orbital-stats.cpp
++++ b/ui/orbital-stats.cpp
+@@ -39,6 +39,7 @@
+ #include <algorithm>
+ #include <cstdint>
+ #include <cstring>
++#include <string>
+ #include <unordered_map>
+ 
+ typedef struct orbital_stats_usage_t {
+diff --git a/ui/orbital.c b/ui/orbital.c
+index 1bf0d1e5e0..32f5b2a3f7 100644
+--- a/ui/orbital.c
++++ b/ui/orbital.c
+@@ -69,6 +69,8 @@ typedef struct OrbitalUI {
+     struct orbital_debug_gpu_t *gpu_debugger;
+     struct orbital_procs_t *procs;
+     struct orbital_procs_list_t *procs_list;
++    QemuMutex uart_log_mutex;
++    FILE *uart_log_file;
+     bool show_stats;
+     bool show_uart;
+     bool show_gpu_debugger;
+@@ -117,6 +119,16 @@ void orbital_log_uart(int index, char ch)
+ {
+     (void)index; // Unused
+     orbital_logs_logchr(ui.logs_uart, ch);
++    qemu_mutex_lock(&ui.uart_log_mutex);
++    if (ui.uart_log_file) {
++        if (fputc((unsigned char)ch, ui.uart_log_file) == EOF ||
++            fflush(ui.uart_log_file) != 0) {
++            error_report("orbital: failed writing UART capture file");
++            fclose(ui.uart_log_file);
++            ui.uart_log_file = NULL;
++        }
++    }
++    qemu_mutex_unlock(&ui.uart_log_mutex);
+ }
+ 
+ void orbital_log_event(int device, int component, int event)
+@@ -717,6 +729,17 @@ static void* orbital_display_main(void* arg)
+ 
+ static void orbital_display_early_init(DisplayOptions *o)
+ {
++    const char *uart_log_path = getenv("ORBITAL_UART_LOG");
++
++    qemu_mutex_init(&ui.uart_log_mutex);
++    if (uart_log_path && *uart_log_path) {
++        ui.uart_log_file = fopen(uart_log_path, "wb");
++        if (!ui.uart_log_file) {
++            error_report("orbital: could not open UART capture file '%s'",
++                uart_log_path);
++        }
++    }
++
+     qemu_thread_create(&ui.sdl_thread, "sdl_thread",
+         orbital_display_main, NULL, QEMU_THREAD_JOINABLE);
+ 

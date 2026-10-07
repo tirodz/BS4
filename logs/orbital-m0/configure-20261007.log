@@ -1,0 +1,133 @@
+Install prefix    c:/Program Files/QEMU
+BIOS directory    c:/Program Files/QEMU
+firmware path     c:/Program Files/QEMU/share/qemu-firmware
+binary directory  c:/Program Files/QEMU
+library directory c:/Program Files/QEMU/lib
+module directory  c:/Program Files/QEMU/lib
+libexec directory c:/Program Files/QEMU/libexec
+include directory c:/Program Files/QEMU/include
+config directory  c:/Program Files/QEMU
+local state directory   queried at runtime
+Windows SDK       no
+Source path       /c/Users/Syf/Desktop/BS4/orbital-500/orbital-qemu
+GIT binary        git
+GIT submodules    ui/keycodemapdb
+C compiler        /mingw64/bin/gcc
+Host C compiler   cc
+C++ compiler      c++
+Objective-C compiler /mingw64/bin/gcc
+ARFLAGS           rv
+CFLAGS            -g -g -std=gnu11 -Wno-error=implicit-function-declaration -I/c/Users/Syf/Desktop/BS4/tools/glslang-install/include
+QEMU_CFLAGS       -IC:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/pixman-1  -DHAS_LIBSSH2_SFTP_FSYNC -IC:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/include/glib-2.0 -IC:/Users/Syf/Desktop/BS4/tools/msys64/msys64/mingw64/lib/glib-2.0/include -m64 -mcx16 -mthreads -D__USE_MINGW_ANSI_STDIO=1 -DWIN32_LEAN_AND_MEAN -DWINVER=0x501 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -fwrapv  -Wno-error=address-of-packed-member -Wexpansion-to-defined -Wendif-labels -Wno-shift-negative-value -Wno-missing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong  -I/mingw64/include 
+LDFLAGS           -Wl,--warn-common -m64 -g -L/c/Users/Syf/Desktop/BS4/tools/glslang-install/lib
+make              make
+install           install
+python            python -B
+smbd              /usr/sbin/smbd
+module support    no
+host CPU          x86_64
+host big endian   no
+target list       ps4-softmmu
+gprof enabled     no
+sparse enabled    no
+strip binaries    no
+profiler          no
+static build      no
+SDL support       yes (2.32.10)
+GTK support       no 
+GTK GL support    no
+VTE support       no 
+TLS priority      NORMAL
+GNUTLS support    yes
+GNUTLS rnd        yes
+libgcrypt         yes
+libgcrypt kdf     yes
+nettle            no 
+nettle kdf        no
+libtasn1          yes
+curses support    no
+virgl support     no
+curl support      yes
+mingw32 support   yes
+Audio drivers     dsound
+Block whitelist (rw) 
+Block whitelist (ro) 
+VirtFS support    no
+Multipath support no
+VNC support       yes
+VNC SASL support  no
+VNC JPEG support  no
+VNC PNG support   no
+xen support       no
+brlapi support    no
+bluez  support    no
+Documentation     no
+PIE               no
+vde support       no
+netmap support    no
+Linux AIO support no
+ATTR/XATTR support no
+Install blobs     yes
+KVM support       no
+HAX support       yes
+HVF support       no
+WHPX support      no
+TCG support       yes
+TCG debug enabled yes
+TCG interpreter   no
+malloc trim support no
+RDMA support      no
+fdt support       yes
+membarrier        no
+preadv support    no
+fdatasync         no
+madvise           no
+posix_madvise     no
+posix_memalign    no
+libcap-ng support no
+vhost-net support no
+vhost-crypto support no
+vhost-scsi support no
+vhost-vsock support no
+vhost-user support no
+Trace backends    log
+spice support     no 
+rbd support       no
+xfsctl support    no
+smartcard support no
+libusb            yes
+usb net redir     no
+OpenGL support    no
+OpenGL dmabufs    no
+Vulkan support    yes
+libiscsi support  no
+libnfs support    no
+build guest agent yes
+QGA VSS support   no
+QGA w32 disk info yes
+QGA MSI support   no
+seccomp support   no
+coroutine backend win32
+coroutine pool    yes
+debug stack usage no
+crypto afalg      no
+GlusterFS support no
+gcov              gcov
+gcov enabled      no
+TPM support       yes
+libssh2 support   yes
+TPM passthrough   no
+TPM emulator      no
+QOM debugging     yes
+Live block migration yes
+lzo support       no
+snappy support    no
+bzip2 support     yes
+NUMA host support no
+libxml2           no
+tcmalloc support  no
+jemalloc support  no
+avx2 optimization yes
+replication support yes
+VxHS block device no
+capstone          no

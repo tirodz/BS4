@@ -1,0 +1,21 @@
+  Working around non-functional -fwhole-program
+scripts/kconfig/conf --olddefconfig /c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:133: syntax error
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:132: unknown option "Currently"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:133: unknown option "it"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:134: unknown option "probably"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:328: syntax error
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:327: unknown option "Disabling"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:328: unknown option "cmos"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:533: syntax error
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:532: unknown option "Set"
+/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig:133:warning: multi-line strings not supported
+make[1]: *** [/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/scripts/kconfig/Makefile:86: olddefconfig] Error 1
+The version of LD on this system (/c/Users/Syf/Desktop/BS4/tools/elf-toolchain/ld) does not properly handle
+alignments.  As a result, this project can not be built.
+
+The problem may be the result of this LD bug report:
+ http://sourceware.org/bugzilla/show_bug.cgi?id=12726
+
+Please update to a working version of binutils and retry.
+Makefile:111: *** "Please upgrade the build environment".  Stop.

@@ -1,0 +1,20 @@
+# Proprietary Sony material and console-specific dumps
+/PS4UPDATE*.PUP
+/firmware/official/**
+/firmware/orbital-5.00/**
+/firmware/console-dumps/**
+
+# Local toolchains, downloaded source archives and build output
+/tools/**
+/orbital/
+/orbital-500/
+/out/
+*.qcow2
+*.bin
+*.elf
+*.self
+*.sprx
+
+# Keep directories with documentation/scripts trackable
+!/firmware/tools/
+!/firmware/tools/**

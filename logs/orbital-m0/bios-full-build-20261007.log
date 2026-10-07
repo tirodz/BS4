@@ -1,0 +1,169 @@
+make: Entering directory '/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/out'
+/usr/bin/gcc -Iscripts/kconfig -I/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/scripts/kconfig  -Iscripts/kconfig -DCURSES_LOC="<curses.h>" -DLOCALE -DKBUILD_NO_NLS -c -o scripts/kconfig/zconf.tab.o scripts/kconfig/zconf.tab.c
+/usr/bin/gcc  -o scripts/kconfig/conf scripts/kconfig/conf.o scripts/kconfig/zconf.tab.o  
+scripts/kconfig/conf --olddefconfig /c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig
+#
+# configuration written to .config
+#
+make: Leaving directory '/c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/out'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+scripts/kconfig/conf --olddefconfig /c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/src/Kconfig
+#
+# configuration written to /c/Users/Syf/Desktop/BS4/orbital-500/orbital-bios/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+  Build Kconfig config file
+clang: warning: optimization flag '-fno-merge-constants' is not supported [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fno-defer-pop' is not supported [-Wignored-optimization-argument]
+clang: warning: argument unused during compilation: '-c' [-Wunused-command-line-argument]
+  Compile checking out/src/misc.o
+  Compile checking out/src/stacks.o
+  Compile checking out/src/output.o
+clang: warning: optimization flag '-fno-merge-constants' is not supported [-Wignored-optimization-argument]
+clang: clangwarning: : optimization flag '-fno-merge-constants' is not supported [-Wignored-optimization-argument]warning: 
+optimization flag '-fno-merge-constants' is not supported [-Wignored-optimization-argument]
+src/asm-offsets.c:11:5: error: unexpected token at start of statement
+   11 |     COMMENT("BREGS");
+      |     ^
+src/gen-defs.h:17:21: note: expanded from macro 'COMMENT'
+   17 |     asm volatile("\n->#" x)
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->#BREGS
+      | ^
+src/asm-offsets.c:12:5: error: unexpected token at start of statement
+   12 |     OFFSET(BREGS_es, bregs, es);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_es $2 offsetof(struct bregs, es)
+      | ^
+src/asm-offsets.c:13:5: error: unexpected token at start of statement
+   13 |     OFFSET(BREGS_ds, bregs, ds);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_ds $0 offsetof(struct bregs, ds)
+      | ^
+src/asm-offsets.c:14:5: error: unexpected token at start of statement
+   14 |     OFFSET(BREGS_eax, bregs, eax);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_eax $28 offsetof(struct bregs, eax)
+      | ^
+src/asm-offsets.c:15:5: error: unexpected token at start of statement
+   15 |     OFFSET(BREGS_ebx, bregs, ebx);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_ebx $16 offsetof(struct bregs, ebx)
+      | ^
+src/asm-offsets.c:16:5: error: unexpected token at start of statement
+   16 |     OFFSET(BREGS_ecx, bregs, ecx);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_ecx $24 offsetof(struct bregs, ecx)
+      | ^
+src/asm-offsets.c:17:5: error: unexpected token at start of statement
+   17 |     OFFSET(BREGS_edx, bregs, edx);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_edx $20 offsetof(struct bregs, edx)
+      | ^
+src/asm-offsets.c:18:5: error: unexpected token at start of statement
+   18 |     OFFSET(BREGS_ebp, bregs, ebp);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_ebp $12 offsetof(struct bregs, ebp)
+      | ^
+src/asm-offsets.c:19:5: error: unexpected token at start of statement
+   19 |     OFFSET(BREGS_esi, bregs, esi);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_esi $8 offsetof(struct bregs, esi)
+      | ^
+src/asm-offsets.c:20:5: error: unexpected token at start of statement
+   20 |     OFFSET(BREGS_edi, bregs, edi);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_edi $4 offsetof(struct bregs, edi)
+      | ^
+src/asm-offsets.c:21:5: error: unexpected token at start of statement
+   21 |     OFFSET(BREGS_flags, bregs, flags);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_flags $36 offsetof(struct bregs, flags)
+      | ^
+src/asm-offsets.c:22:5: error: unexpected token at start of statement
+   22 |     OFFSET(BREGS_code, bregs, code);
+      |     ^
+src/gen-defs.h:14:5: note: expanded from macro 'OFFSET'
+   14 |     DEFINE(sym, offsetof(struct str, mem))
+      |     ^
+src/gen-defs.h:8:21: note: expanded from macro 'DEFINE'
+    8 |     asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+      |                     ^
+<inline asm>:2:1: note: instantiated into assembly here
+    2 | ->BREGS_code $32 offsetof(struct bregs, code)
+      | ^
+12 errors generated.
+make: *** [Makefile:132: out/src/asm-offsets.s] Error 1
+make: *** Waiting for unfinished jobs....

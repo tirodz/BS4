@@ -1,0 +1,81 @@
+Importing unicode...
+Importing libgcrypt...
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:108: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  if re.match ("(Manifest|Makefile\.am|ac\.c|cipher\.c|hash-common\.c|hmac-tests\.c|md\.c|pubkey\.c)$", cipher_file) or cipher_file == "kdf.c" or cipher_file == "elgamal.c" or cipher_file == "primegen.c" or cipher_file == "ecc.c" or cipher_file == "test-getrusage.c":
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:112: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  if re.match ("Makefile\.in$", cipher_file):
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:115: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  if re.match (".*\.[ch]$", cipher_file):
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:116: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  isc = re.match (".*\.c$", cipher_file)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:204: SyntaxWarning: "\[" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\["? A raw string is also an option.
+  m = re.match ("(static byte|static unsigned char) (weak_keys_chksum)\[[0-9]*\] =", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:296: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("static const char \*selftest.*;$", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:298: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  fname = line[len ("static const char \*"):]
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:334: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static void \(\*progress_cb\).*;$", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:343: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("static void \*progress_cb_data.*;$", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:353: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("(static const char( |)\*|static gpg_err_code_t|void|static int|static gcry_err_code_t|static gcry_mpi_t|static void|void|static elliptic_curve_t) *$", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:358: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set2keys \(.*\);", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:361: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set3keys \(.*\);", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:364: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set2keys \(", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:368: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  m = re.match ("static int tripledes_set3keys \(", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:576: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  m = re.match ("(const char( |)\*|void) *$", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:581: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  m = re.match ("#include \"mod-source-info\.h\"", line)
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:55: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  conf = codecs.open (os.path.join ("grub-core", "Makefile.gcry.def"), "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:57: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  confutil = codecs.open ("Makefile.utilgcry.def", "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:87: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  cryptolist = codecs.open (os.path.join (cipher_dir_out, "crypto.lst"), "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:117: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f = codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:118: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw = codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:522: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw = codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:530: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f = codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:556: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f = codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:557: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw = codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:589: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:596: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:603: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:610: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:620: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  initfile = codecs.open (os.path.join (cipher_dir_out, "init.c"), "w", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:646: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  f=codecs.open (infile, "r", "utf-8")
+C:/Users/Syf/Desktop/BS4/orbital-500/orbital-grub/util/import_gcry.py:647: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+  fw=codecs.open (outfile, "w", "utf-8")
+Generating Automake input...
+Saving timestamps...
+Running autoreconf...
+autoreconf-2.73: export WARNINGS=
+autoreconf-2.73: Entering directory '.'
+autoreconf-2.73: configure.ac: not running autopoint because it is too old
+autoreconf-2.73: running: aclocal -I m4
+autoreconf-2.73: configure.ac: tracing
+autoreconf-2.73: configure.ac: not using Libtool
+autoreconf-2.73: configure.ac: not using Intltool
+autoreconf-2.73: configure.ac: not using Gtkdoc
+autoreconf-2.73: running: autopoint
+autopoint: *** Missing version: please specify in configure.ac through a line 'AM_GNU_GETTEXT_VERSION(x.yy.zz)' the gettext version the package is using
+autopoint: *** Stop.
+autoreconf-2.73: error: autopoint failed with exit status: 1
