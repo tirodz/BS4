@@ -1,4 +1,4 @@
-# BS4
+# 🎮 BS4
 
 ### PlayStation 4 System Software Research on Windows
 
@@ -12,7 +12,7 @@ The objective is **real Orbis system software** running in an emulated PS4 envir
 
 ---
 
-## Current status
+## 📍 Current status
 
 **Phase:** Historical Orbital revival / M0 preparation  
 **Platform:** Windows + MSYS2  
@@ -45,7 +45,7 @@ Safe Mode is only a **diagnostic checkpoint**. The long-term objective is the ge
 
 ---
 
-## What has been achieved
+## ✅ What has been achieved
 
 The project is based on the historical Orbital revision:
 
@@ -61,7 +61,7 @@ The build process, failures, experiments, source revisions, firmware requirement
 
 ---
 
-## Architecture
+## 🧩 Architecture
 
 At a high level, the historical boot path being reconstructed is:
 
@@ -104,7 +104,7 @@ The exact historical file layout and source consumers are documented in:
 
 ---
 
-## Why Orbital?
+## 🛰️ Why Orbital?
 
 Modern PS4 emulators are primarily focused on running PS4 games. BS4 has a different experimental target: **booting the PS4 operating environment itself**.
 
@@ -114,7 +114,7 @@ This is an experimental engineering choice, not a claim that Orbital is the most
 
 ---
 
-## Firmware and runtime material
+## 🔐 Firmware and runtime material
 
 The project currently targets **PS4 system software 5.00**, because the selected Orbital baseline is tied to that environment.
 
@@ -142,7 +142,7 @@ See:
 - [`docs/FIRMWARE_REQUIREMENTS.md`](docs/FIRMWARE_REQUIREMENTS.md)
 - [`research/ORBITAL_500_RUNTIME_LAYOUT.md`](research/ORBITAL_500_RUNTIME_LAYOUT.md)
 
-### Proprietary material policy
+### 🔒 Proprietary material policy
 
 Sony firmware, console dumps, decrypted proprietary binaries, keys, secrets, and other restricted material remain **local-only** and must not be committed to this repository.
 
@@ -150,15 +150,15 @@ GitHub contains documentation, source-compatible tooling, research, patches, log
 
 ---
 
-## Current engineering blockers
+## 🚧 Current engineering blockers
 
-### BIOS
+### 🧱 BIOS
 
 The historical BIOS requires an **i386 ELF** build environment. The Windows MinGW toolchain produces PE/COFF output, and Clang also rejects legacy GCC-specific x86 inline-assembly constraints used by the pinned BIOS source.
 
 The Kconfig stage has already been repaired for the Windows checkout's CRLF/LF issue. GNU ELF binutils are available locally, and the next route is an **i686-ELF GCC** toolchain.
 
-### GRUB
+### 🧰 GRUB
 
 Historical GRUB also requires an ELF-oriented build path. The native MinGW linker produces PE/COFF, causing GRUB's linker probe to fail.
 
@@ -168,7 +168,7 @@ No guest boot has been attempted yet.
 
 ---
 
-## Repository structure
+## 🗂️ Repository structure
 
 ```text
 .
@@ -185,7 +185,7 @@ The large historical Orbital checkout, build toolchains, generated binaries, and
 
 ---
 
-## Documentation and continuity
+## 📚 Documentation and continuity
 
 This repository is intended to be the project's **long-term source of truth**.
 
@@ -205,7 +205,7 @@ Every meaningful build failure, discovery, experiment, and milestone should be r
 
 ---
 
-## What BS4 is not
+## 🚫 What BS4 is not
 
 BS4 is **not**:
 
@@ -219,7 +219,7 @@ The project will only claim a PS4-system milestone when it has been **actually r
 
 ---
 
-## Long-term goal
+## 🎯 Long-term goal
 
 ```text
 Windows
